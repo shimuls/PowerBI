@@ -1,0 +1,119 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["zCPO_STYLE","zCPO_STYLE_DELIVERY","zCPO","zCUSTOMER","zFACTORY","zMASTER_DETAIL","zCUSTOMER_GROUP","FiscalYear2020_2039","zCOUNTRY_OFFICE","zORGANISATION_STRUCTURE","zDIVISION","zFPO","zFACTORY_INVOICE","zSHIPMENT_SKU","zSHIPMENT_STYLE","zSHIPMENT","zCPO_SKU","Audit_Factory","zCPO_STYLE_F","View_Shipment_SKU_Delivery","zZXY_INVOICE","zFACTORY_INVOICE_SALES_CONTRACT","StyleWiseShipment","zxyInvoice_Status","StyleWiseShipment_Order"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.145.1105.0 (25.07)+decbc46fce458c5b8d5109d6f32a743f2ac949c8
+
+annotation PBI_ProTooling = ["DaxQueryView_Desktop","DevMode"]
+
+ref table zCPO_STYLE
+ref table DateTableTemplate_fb1f027e-2b58-42e9-a4c0-a88ce618e6a2
+ref table LocalDateTable_23fdbfd6-6fa0-44ae-8b7e-263e7a0ac91a
+ref table LocalDateTable_54125f71-a291-42cd-9211-834155b0472b
+ref table LocalDateTable_78aed3c4-5512-4a2d-ab82-69f5b5daabd6
+ref table LocalDateTable_e0f7c823-7daa-4233-883b-9ef4012962e1
+ref table zCPO_STYLE_DELIVERY
+ref table LocalDateTable_89991432-d9ea-48c5-9dba-cbb922479636
+ref table LocalDateTable_f363520f-6d7b-41c8-b32a-29b61ad2137f
+ref table LocalDateTable_e5c07f4d-9d2d-4bf4-8aaa-62b3580b9166
+ref table zCPO
+ref table LocalDateTable_8bdc8f48-c581-4f35-b8f6-c4a732b9f188
+ref table LocalDateTable_731d3ecf-b7e4-4ed8-a0b8-d3235ac66d1d
+ref table LocalDateTable_1473583b-acb4-49f2-984f-1688e26858f9
+ref table LocalDateTable_be363410-b8b5-4866-a602-74595cafbb35
+ref table zCUSTOMER
+ref table LocalDateTable_0497ae33-2fe5-4e8f-867b-c48eec14a294
+ref table LocalDateTable_aad603a2-6238-450c-83c2-73ac4c699b23
+ref table LocalDateTable_83ad7e74-e562-49cb-9997-594b7b6b2eb0
+ref table zFACTORY
+ref table LocalDateTable_0bd654fb-a28b-4585-886d-0ee6f259a21b
+ref table LocalDateTable_33472510-d2e0-4bfc-a1aa-aff58dc58760
+ref table LocalDateTable_64a6423c-c2ad-4dd2-be28-cb8d579ccd35
+ref table zMASTER_DETAIL
+ref table LocalDateTable_dc28a89b-51a0-4593-9072-9f00dbf883e7
+ref table LocalDateTable_3cdcae04-4f6f-4bea-ac77-80bfc857b233
+ref table zCUSTOMER_GROUP
+ref table LocalDateTable_7b3be01b-706b-4766-8533-89583fe36472
+ref table LocalDateTable_9fd2fc3e-eee8-4c7d-8094-e37188d51288
+ref table FiscalYear2020_2039
+ref table zCOUNTRY_OFFICE
+ref table LocalDateTable_bc44761f-c1a6-4f74-976f-dafb8bdf02a7
+ref table LocalDateTable_1850602d-ec61-4ce2-95bd-cbdc46792701
+ref table zORGANISATION_STRUCTURE
+ref table zDIVISION
+ref table LocalDateTable_c2bc1a25-b6bf-46ba-a961-cf41d9e48586
+ref table LocalDateTable_5b0685ca-2bfa-4ad2-abeb-a90708f6d7d3
+ref table zFPO
+ref table LocalDateTable_aa47dde5-cb4f-4bf4-b8c9-e5aaf7d191d6
+ref table LocalDateTable_2863becf-bdca-48e6-83de-82d65b87954f
+ref table zFACTORY_INVOICE
+ref table LocalDateTable_521a2903-0b2f-4932-bb25-8caef1f0a08b
+ref table LocalDateTable_2d013d3b-afc1-43c1-a789-01805095ba77
+ref table LocalDateTable_87db6cd2-9c35-4f62-abde-13910240713f
+ref table LocalDateTable_82a80daa-3448-49d2-bf77-d4e953b1f86d
+ref table LocalDateTable_0f072cbc-5b6c-4e3e-a26f-40698a9230dd
+ref table LocalDateTable_05134b40-71f0-451e-8346-79bcefe19465
+ref table zSHIPMENT_SKU
+ref table LocalDateTable_15d4f9fa-50c5-40ca-afe0-6fe68fb3fd38
+ref table LocalDateTable_25a65527-bd6f-457b-90e9-3ad220f30a09
+ref table zSHIPMENT_STYLE
+ref table zSHIPMENT
+ref table LocalDateTable_6a25295c-1bf3-459d-8b66-39ccf18f3b99
+ref table LocalDateTable_fbac8301-5f9d-4e06-90e9-6aa3ccd5abde
+ref table LocalDateTable_598f7952-1aae-4b5f-9d35-9242945e60fc
+ref table LocalDateTable_91f58ca1-d9cc-4ee2-97b9-bb862e5edd1a
+ref table LocalDateTable_d5ff6428-5c85-41f5-a952-68bbaa65985b
+ref table LocalDateTable_625acb91-78f6-4f35-b55c-caa14e28b7ff
+ref table LocalDateTable_a98cbe11-9cdf-4989-a502-82afd8be0a0b
+ref table LocalDateTable_1b34c75c-3319-4658-a83d-6322e469f198
+ref table LocalDateTable_45ccfb00-cacb-40ea-ab4c-4a81d959123c
+ref table LocalDateTable_4ac50dc8-1878-4c35-a64c-b6943ff2b4b0
+ref table LocalDateTable_17b5449a-370e-4a46-a545-1e3e89e52c7d
+ref table LocalDateTable_8e8c8363-ea21-42e3-b074-10b6b915a3fd
+ref table zCPO_SKU
+ref table LocalDateTable_a9cc05d8-0282-406b-908f-36968e2b6a2b
+ref table LocalDateTable_7e206b87-e2df-49f2-b594-8386bf2b7aa6
+ref table Audit_Factory
+ref table LocalDateTable_31f9705c-d61d-455a-883a-4654e9381166
+ref table LocalDateTable_f269aa6f-a8eb-4450-8651-c9337b944cea
+ref table LocalDateTable_1d25945c-eb2a-4237-a696-e092cdbdc5a6
+ref table LocalDateTable_4692d240-aa31-4537-9988-c33f2de6fb0c
+ref table LocalDateTable_c7bd05b0-484f-4b3d-80d5-82e9e5f4aa80
+ref table zCPO_STYLE_F
+ref table LocalDateTable_26c1e0e4-031b-4d4f-bc50-e34b299bb2e6
+ref table LocalDateTable_adb7f0be-f8dd-4425-a598-1219a64e016a
+ref table LocalDateTable_de6a5815-142f-4d47-a012-34e01f5204cb
+ref table LocalDateTable_86f6f6c7-9392-4d3c-9144-35e6e580866f
+ref table View_Shipment_SKU_Delivery
+ref table LocalDateTable_e9c3db99-3be8-474d-a5b4-c6f7d55108dd
+ref table LocalDateTable_eef34273-dde3-4949-a7cc-74fb4c55ec20
+ref table zZXY_INVOICE
+ref table LocalDateTable_4da93472-a6b7-4c61-a1c3-f03bd66a1ee6
+ref table LocalDateTable_36d6b469-0e73-4513-9e45-ed5f9713034e
+ref table LocalDateTable_2fbe04ad-ccab-434c-914b-c9c723e0054c
+ref table LocalDateTable_90fbe0c8-1813-44ac-8625-8c6462b1a763
+ref table LocalDateTable_3d8d781e-a859-442c-b25b-0650f32158fa
+ref table zFACTORY_INVOICE_SALES_CONTRACT
+ref table LocalDateTable_28e98825-9e5c-47d3-b3dd-651422da0e58
+ref table LocalDateTable_5d325701-b648-4550-ac5e-cf34db14c7bf
+ref table LocalDateTable_f15bf2a1-d515-48d7-856f-dd8c081d669c
+ref table LocalDateTable_760a7fbe-24c6-461c-8b8e-10cb875844e5
+ref table LocalDateTable_2fa22dcd-23b2-44b2-b7bc-7aba6428c8c8
+ref table StyleWiseShipment
+ref table LocalDateTable_519855fd-ef23-4224-8888-1032c3df88f5
+ref table zxyInvoice_Status
+ref table LocalDateTable_822b5e70-9096-4579-b3e1-c71f645b7f94
+ref table LocalDateTable_fcedbd56-ba85-4e03-8d12-d65a3c20df79
+ref table StyleWiseShipment_Order
+ref table LocalDateTable_f10d9d5d-3048-4fe0-9f8b-af1a4540b3fb
+
+ref cultureInfo en-US
+

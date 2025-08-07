@@ -1,0 +1,116 @@
+table FiscalYear2020_2039
+	lineageTag: 91dd9de5-70a6-4bd0-bc18-09229224e6f2
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 49f519bc-dde9-4345-b87a-ed1473658f8c
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variation
+			isDefault
+			relationship: 0ad2041f-c12d-4c98-ba8a-bd044b9606fa
+			defaultHierarchy: LocalDateTable_2fa22dcd-23b2-44b2-b7bc-7aba6428c8c8.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 4cdb2eb1-5b36-429f-95a3-a948ec77136a
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Number'
+		dataType: int64
+		formatString: 0
+		lineageTag: ebbc56e3-bb2b-4046-a8f2-04c55b443a9c
+		summarizeBy: sum
+		sourceColumn: Month Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Name'
+		dataType: string
+		lineageTag: d156308b-96d6-4314-9dce-9db7af83f42e
+		summarizeBy: none
+		sourceColumn: Month Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Short Month'
+		dataType: string
+		lineageTag: ee942f9f-80d4-4331-8e0b-0cc926e1ad97
+		summarizeBy: none
+		sourceColumn: Short Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		dataType: string
+		lineageTag: 91106656-d42b-4298-9c01-d8b878a5f2ba
+		summarizeBy: none
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column Day
+		dataType: int64
+		formatString: 0
+		lineageTag: 43a7f69d-e41c-40c5-a807-d53017a4212c
+		summarizeBy: sum
+		sourceColumn: Day
+
+		annotation SummarizationSetBy = Automatic
+
+	column Weekday
+		dataType: string
+		lineageTag: 31c441a6-3bf7-4908-bf73-78d9ff3a737a
+		summarizeBy: none
+		sourceColumn: Weekday
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Short Weekday'
+		dataType: string
+		lineageTag: d77727e7-fee1-4a96-a764-80c1e0bd2e7c
+		summarizeBy: none
+		sourceColumn: Short Weekday
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fiscal Year'
+		dataType: string
+		lineageTag: 78da47e8-bf63-4504-b596-543cfb642e09
+		summarizeBy: none
+		sourceColumn: Fiscal Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fiscal Quarter'
+		dataType: string
+		lineageTag: 9264877a-9440-428a-befd-3770c4c4e578
+		summarizeBy: none
+		sourceColumn: Fiscal Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FiscalYear2020_2039 = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\ZXY\Downloads\FiscalDateTable_AprilToMarch_2020_2039.csv"),[Delimiter=",", Columns=11, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Date", type date}, {"Year", Int64.Type}, {"Month Number", Int64.Type}, {"Month Name", type text}, {"Short Month", type text}, {"Quarter", type text}, {"Day", Int64.Type}, {"Weekday", type text}, {"Short Weekday", type text}, {"Fiscal Year", type text}, {"Fiscal Quarter", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

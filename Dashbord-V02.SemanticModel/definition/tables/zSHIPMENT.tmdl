@@ -1,0 +1,500 @@
+table zSHIPMENT
+	lineageTag: b67a573a-8d19-491c-854e-6b58598da4c8
+
+	column RecordStatus
+		dataType: string
+		lineageTag: 727a08c7-d126-44f7-912a-a3af43c406c6
+		summarizeBy: none
+		sourceColumn: RecordStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3cde0683-1c16-48c7-82d2-6289771d94ff
+		summarizeBy: none
+		sourceColumn: CreatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: a81554b8-5806-42ec-8cee-57f1cdbd1ad6
+			defaultHierarchy: LocalDateTable_6a25295c-1bf3-459d-8b66-39ccf18f3b99.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 139aa3e8-3e53-47ff-b1c1-84133ed25a8d
+		summarizeBy: none
+		sourceColumn: UpdatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: 837f5cb1-8100-4e9c-80d9-27f384e198a8
+			defaultHierarchy: LocalDateTable_fbac8301-5f9d-4e06-90e9-6aa3ccd5abde.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ShipmentID
+		dataType: string
+		lineageTag: 7c3245c9-8300-479a-8003-06a99ffb28ab
+		summarizeBy: none
+		sourceColumn: ShipmentID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ShipmentDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c2fa8f17-a17a-41f7-8521-afc0edec39b9
+		summarizeBy: none
+		sourceColumn: ShipmentDate
+
+		variation Variation
+			isDefault
+			relationship: a06240aa-2de2-4553-abcc-aa6cda4be424
+			defaultHierarchy: LocalDateTable_598f7952-1aae-4b5f-9d35-9242945e60fc.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column VoyageNumber
+		dataType: string
+		lineageTag: c77382e1-c36f-425b-8f99-e3f419c68b5a
+		summarizeBy: none
+		sourceColumn: VoyageNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column ETD
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 49ca9355-63dd-4bf7-b13d-09769fde4513
+		summarizeBy: none
+		sourceColumn: ETD
+
+		variation Variation
+			isDefault
+			relationship: a85b821b-46ee-43a3-8e9f-ef518b0de6d7
+			defaultHierarchy: LocalDateTable_760a7fbe-24c6-461c-8b8e-10cb875844e5.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ETA
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 20d4282a-bcca-46e7-85d5-85ca7d4068b8
+		summarizeBy: none
+		sourceColumn: ETA
+
+		variation Variation
+			isDefault
+			relationship: 4ec54c93-fe55-4c3c-a674-ee397098aab5
+			defaultHierarchy: LocalDateTable_91f58ca1-d9cc-4ee2-97b9-bb862e5edd1a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column CarrierAirlineName
+		dataType: string
+		lineageTag: 4e9c57f8-d80e-4bc8-ac12-33d693e595c4
+		summarizeBy: none
+		sourceColumn: CarrierAirlineName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Remarks
+		dataType: string
+		lineageTag: c3ca7ee1-92f1-42a5-aab0-ca036b5f7356
+		summarizeBy: none
+		sourceColumn: Remarks
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExFactoryDate
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: a788e9f3-ac5a-4b34-9bac-43ea64bc33a0
+		summarizeBy: none
+		sourceColumn: ExFactoryDate
+
+		variation Variation
+			isDefault
+			relationship: d5788b45-4454-4aa9-b90d-557b276106e9
+			defaultHierarchy: LocalDateTable_d5ff6428-5c85-41f5-a952-68bbaa65985b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column HBL-HAWB
+		dataType: string
+		lineageTag: 95b406b1-22bd-49d5-9664-21de4d00caba
+		summarizeBy: none
+		sourceColumn: HBL-HAWB
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContainerNumber
+		dataType: string
+		lineageTag: c56fec91-fee7-4086-9d60-c5001d9f2363
+		summarizeBy: none
+		sourceColumn: ContainerNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column CartonQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: efbd80dd-bc6f-4a76-94ba-8dffc2b2f7aa
+		summarizeBy: sum
+		sourceColumn: CartonQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerValue
+		dataType: double
+		lineageTag: 15b32aa2-ce05-4f42-9944-0586c29c93b2
+		summarizeBy: sum
+		sourceColumn: CustomerValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FactoryValue
+		dataType: double
+		lineageTag: c22dd7bc-2d8a-42a6-96ec-6793d8dbda47
+		summarizeBy: sum
+		sourceColumn: FactoryValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ActualPaymentTermsID
+		dataType: string
+		lineageTag: 830eb417-40f4-4d73-bb7c-46e587be505d
+		summarizeBy: none
+		sourceColumn: ActualPaymentTermsID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedByUserID
+		dataType: string
+		lineageTag: 9c652fb4-4e82-4d03-8d1b-ae0a2a494612
+		summarizeBy: none
+		sourceColumn: CreatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrencyID
+		dataType: string
+		lineageTag: 16ce81f0-7161-4278-905d-5f4527c41ae4
+		summarizeBy: none
+		sourceColumn: CurrencyID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FactoryInvoiceID
+		dataType: string
+		lineageTag: 75e237b4-19b5-41be-81a7-fb8ae23f12dc
+		summarizeBy: none
+		sourceColumn: FactoryInvoiceID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ForwarderID
+		dataType: string
+		lineageTag: f341e1b8-c023-42d6-b50c-5ddeae168248
+		summarizeBy: none
+		sourceColumn: ForwarderID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FreightTermsID
+		dataType: string
+		lineageTag: dabd8afd-d964-4217-8a35-a171770db17a
+		summarizeBy: none
+		sourceColumn: FreightTermsID
+
+		annotation SummarizationSetBy = Automatic
+
+	column OriginalPaymentTermsID
+		dataType: string
+		lineageTag: 6665ec74-5d47-4ce8-826e-db99d70cc553
+		summarizeBy: none
+		sourceColumn: OriginalPaymentTermsID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PaymentStatusID
+		dataType: string
+		lineageTag: 6b46d338-80d8-4cc0-baef-bb4c2ec97bb8
+		summarizeBy: none
+		sourceColumn: PaymentStatusID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ShipmentModeID
+		dataType: string
+		lineageTag: 1b2f3291-a911-44eb-b0bd-97f340306b29
+		summarizeBy: none
+		sourceColumn: ShipmentModeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedByUserID
+		dataType: string
+		lineageTag: 4daab764-1e76-431e-a6dd-03393ccd4916
+		summarizeBy: none
+		sourceColumn: UpdatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column VesselTypeID
+		dataType: string
+		lineageTag: fe64870d-614b-47d0-8e88-5e315a96b5b4
+		summarizeBy: none
+		sourceColumn: VesselTypeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FinancialCompanyID
+		dataType: string
+		lineageTag: 1936ef76-1a40-4c7a-bfb6-8335ef77dfb2
+		summarizeBy: none
+		sourceColumn: FinancialCompanyID
+
+		annotation SummarizationSetBy = Automatic
+
+	column GrossWeightUOMID
+		dataType: string
+		lineageTag: a6228e57-dab2-4fd7-b9e3-ac24c9dc887d
+		summarizeBy: none
+		sourceColumn: GrossWeightUOMID
+
+		annotation SummarizationSetBy = Automatic
+
+	column IncoTermID
+		dataType: string
+		lineageTag: 3439e759-a0d5-4d75-8be6-d38ce2dad840
+		summarizeBy: none
+		sourceColumn: IncoTermID
+
+		annotation SummarizationSetBy = Automatic
+
+	column NetWeightUOMID
+		dataType: string
+		lineageTag: c3adbc3b-53d1-455a-8d96-b43d6f530331
+		summarizeBy: none
+		sourceColumn: NetWeightUOMID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryOfOriginID
+		dataType: string
+		lineageTag: 6f1cd48d-fd62-457a-b890-81af5056d54e
+		summarizeBy: none
+		sourceColumn: CountryOfOriginID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PortOfDestinationID
+		dataType: string
+		lineageTag: 153970d3-966b-49ea-86d3-555d5fa60744
+		summarizeBy: none
+		sourceColumn: PortOfDestinationID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PortOfLoadingID
+		dataType: string
+		lineageTag: e5242daa-7495-400d-bc95-c93bb4670134
+		summarizeBy: none
+		sourceColumn: PortOfLoadingID
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalGrossWeight
+		dataType: double
+		lineageTag: e221b129-9975-4d5c-9ccc-4cc9ed8d512f
+		summarizeBy: sum
+		sourceColumn: TotalGrossWeight
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TotalNetWeight
+		dataType: double
+		lineageTag: cc237b52-8ec6-492a-bf13-a9c8e87ba94c
+		summarizeBy: sum
+		sourceColumn: TotalNetWeight
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TotalVolume
+		dataType: double
+		lineageTag: 66801577-a704-4271-9257-7211b8549e7b
+		summarizeBy: sum
+		sourceColumn: TotalVolume
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UOMID
+		dataType: string
+		lineageTag: a07920c9-c38b-43c7-8ffa-0150c2d061b0
+		summarizeBy: none
+		sourceColumn: UOMID
+
+		annotation SummarizationSetBy = Automatic
+
+	column VesselName
+		dataType: string
+		lineageTag: 5656126e-b68c-4063-a433-fed21e55ca5b
+		summarizeBy: none
+		sourceColumn: VesselName
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerActualPaymentTermsID
+		dataType: string
+		lineageTag: 8935b469-be49-42bd-a0ff-37d1bf6583dc
+		summarizeBy: none
+		sourceColumn: CustomerActualPaymentTermsID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerOriginalPaymentTermsID
+		dataType: string
+		lineageTag: 1332c717-61ba-4f8f-8d88-6b174ba0f643
+		summarizeBy: none
+		sourceColumn: CustomerOriginalPaymentTermsID
+
+		annotation SummarizationSetBy = Automatic
+
+	column AdditionalNotifyParty
+		dataType: string
+		lineageTag: 7093e62b-a7e5-4b85-8be9-c29299fb3d2c
+		summarizeBy: none
+		sourceColumn: AdditionalNotifyParty
+
+		annotation SummarizationSetBy = Automatic
+
+	column BookingAmendmentDate1
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 07eb527c-5cf9-4a78-81eb-a10aee9af4fe
+		summarizeBy: none
+		sourceColumn: BookingAmendmentDate1
+
+		variation Variation
+			isDefault
+			relationship: 1d004f68-723a-44c5-977e-d4b2ad72b85e
+			defaultHierarchy: LocalDateTable_625acb91-78f6-4f35-b55c-caa14e28b7ff.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column BookingAmendmentDate2
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3b96bad9-72f1-435b-ae8f-d9e7d5327bc2
+		summarizeBy: none
+		sourceColumn: BookingAmendmentDate2
+
+		variation Variation
+			isDefault
+			relationship: f7cd23ad-970f-4d8f-bb10-e2bc23f50ddc
+			defaultHierarchy: LocalDateTable_a98cbe11-9cdf-4989-a502-82afd8be0a0b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column BookingAmendmentDate3
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7e883a9b-04d7-44bb-95d4-6ce7f9ec7ade
+		summarizeBy: none
+		sourceColumn: BookingAmendmentDate3
+
+		variation Variation
+			isDefault
+			relationship: ad1cc812-d6f7-40a7-a45a-f40c860b50a8
+			defaultHierarchy: LocalDateTable_1b34c75c-3319-4658-a83d-6322e469f198.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column CargoHandoverDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: df9e4484-7bcd-4e1b-a1d4-1632e0e214c2
+		summarizeBy: none
+		sourceColumn: CargoHandoverDate
+
+		variation Variation
+			isDefault
+			relationship: 15981fb6-6abd-4afb-a5bb-9d3fa7432432
+			defaultHierarchy: LocalDateTable_45ccfb00-cacb-40ea-ab4c-4a81d959123c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column FinalBookingDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d08e37e3-a37c-4d02-a62c-8b5ae16ef0a4
+		summarizeBy: none
+		sourceColumn: FinalBookingDate
+
+		variation Variation
+			isDefault
+			relationship: 452f77de-f2e8-4010-8bf1-77d49a0e5cc5
+			defaultHierarchy: LocalDateTable_4ac50dc8-1878-4c35-a64c-b6943ff2b4b0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column InitialBookingDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e44a9c79-1436-4e53-8287-d343228ba758
+		summarizeBy: none
+		sourceColumn: InitialBookingDate
+
+		variation Variation
+			isDefault
+			relationship: 1a3114fd-41f0-48da-ac33-e1c04f21db52
+			defaultHierarchy: LocalDateTable_17b5449a-370e-4a46-a545-1e3e89e52c7d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column VSLCutoffDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6f3297e2-2d7e-4afa-b40b-a3ff04cdac42
+		summarizeBy: none
+		sourceColumn: VSLCutoffDate
+
+		variation Variation
+			isDefault
+			relationship: 405f6e86-85ca-4730-9c92-174b82085c31
+			defaultHierarchy: LocalDateTable_8e8c8363-ea21-42e3-b074-10b6b915a3fd.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition zSHIPMENT = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("52.220.68.78"),
+				    zinfotrek = Source{[Name="zinfotrek"]}[Data],
+				    dbo_zSHIPMENT = zinfotrek{[Schema="dbo",Item="zSHIPMENT"]}[Data]
+				in
+				    dbo_zSHIPMENT
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

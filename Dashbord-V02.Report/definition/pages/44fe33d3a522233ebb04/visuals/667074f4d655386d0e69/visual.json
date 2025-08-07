@@ -1,0 +1,141 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "667074f4d655386d0e69",
+  "position": {
+    "x": 0,
+    "y": 206.20060790273558,
+    "z": 12000,
+    "height": 156.59574468085108,
+    "width": 1280,
+    "tabOrder": 12000
+  },
+  "visual": {
+    "visualType": "lineStackedColumnComboChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "zSHIPMENT"
+                    }
+                  },
+                  "Property": "ExFactoryDate"
+                }
+              },
+              "queryRef": "zSHIPMENT.ExFactoryDate",
+              "nativeQueryRef": "ExFactoryDate",
+              "active": true
+            }
+          ],
+          "showAll": true
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "zSHIPMENT_SKU"
+                        }
+                      },
+                      "Property": "TotalCPOQuantity"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(zSHIPMENT_SKU.TotalCPOQuantity)",
+              "nativeQueryRef": "CPO Quantity",
+              "displayName": "CPO Quantity"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "zSHIPMENT_SKU"
+                        }
+                      },
+                      "Property": "TotalFPOQuantity"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(zSHIPMENT_SKU.TotalFPOQuantity)",
+              "nativeQueryRef": "FPO Quantity",
+              "displayName": "FPO Quantity"
+            }
+          ]
+        },
+        "Y2": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "zSHIPMENT_SKU"
+                        }
+                      },
+                      "Property": "SKUShipQuantity"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(zSHIPMENT_SKU.SKUShipQuantity)",
+              "nativeQueryRef": "Shipped Quantity",
+              "displayName": "Shipped Quantity"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "zSHIPMENT"
+                  }
+                },
+                "Property": "ExFactoryDate"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,187 @@
+table zCPO_STYLE_F
+	lineageTag: 62b1922d-d00f-41a2-a5b9-f7205858e491
+
+	column RecordStatus
+		dataType: string
+		lineageTag: 6f5d30c6-527d-417e-956b-7ed74beb58be
+		summarizeBy: none
+		sourceColumn: RecordStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: fe6aba22-977e-4e93-94be-25cf178db5c4
+		summarizeBy: none
+		sourceColumn: CreatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: d948563b-971b-4f1d-8d70-1d9f90dd3fb9
+			defaultHierarchy: LocalDateTable_26c1e0e4-031b-4d4f-bc50-e34b299bb2e6.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9d9bc51d-1285-41b7-a313-bbd617ff3877
+		summarizeBy: none
+		sourceColumn: UpdatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: 03a08d11-d5d8-462b-b070-71276b8eea29
+			defaultHierarchy: LocalDateTable_adb7f0be-f8dd-4425-a598-1219a64e016a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column CPOStyleID
+		dataType: string
+		lineageTag: b853f9bf-466d-43fa-a78b-cdcdb22c10cb
+		summarizeBy: none
+		sourceColumn: CPOStyleID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerDeliveryDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0e99955b-3e2e-47f9-a234-b02bbaf708ea
+		summarizeBy: none
+		sourceColumn: CustomerDeliveryDate
+
+		variation Variation
+			isDefault
+			relationship: e0929272-7b86-4f5a-8291-f0d06b8f53a4
+			defaultHierarchy: LocalDateTable_de6a5815-142f-4d47-a012-34e01f5204cb.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CPOStyleValue
+		dataType: double
+		lineageTag: af7222ca-42af-4ade-9daa-07f3f0ab1e72
+		summarizeBy: sum
+		sourceColumn: CPOStyleValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CPOStyleQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 6042ded6-4223-4ad7-bdc7-69bb05a3a1c1
+		summarizeBy: sum
+		sourceColumn: CPOStyleQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column CPOID
+		dataType: string
+		lineageTag: 1692b975-9288-4a52-bded-cb50c15afe4b
+		summarizeBy: none
+		sourceColumn: CPOID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedByUserID
+		dataType: string
+		lineageTag: d0bf5e6f-913f-4ffe-acbf-e065703bd132
+		summarizeBy: none
+		sourceColumn: CreatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column StyleID
+		dataType: string
+		lineageTag: 3d4a9860-4083-4ee8-919a-484dc094bf87
+		summarizeBy: none
+		sourceColumn: StyleID
+
+		annotation SummarizationSetBy = Automatic
+
+	column StylePricePerTypeID
+		dataType: string
+		lineageTag: 2332bd82-386e-432e-8dd2-a02fb58ee03e
+		summarizeBy: none
+		sourceColumn: StylePricePerTypeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedByUserID
+		dataType: string
+		lineageTag: ce6cd047-2d60-4622-ae53-e9f47e01526b
+		summarizeBy: none
+		sourceColumn: UpdatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FactoryDeliveryDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 000937f0-5773-450e-bf4f-985053906a77
+		summarizeBy: none
+		sourceColumn: FactoryDeliveryDate
+
+		variation Variation
+			isDefault
+			relationship: 21a39534-4744-4715-8012-d93ef8588d49
+			defaultHierarchy: LocalDateTable_86f6f6c7-9392-4d3c-9144-35e6e580866f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FPOID
+		dataType: string
+		lineageTag: c18a8d26-51ca-4f88-aa42-5928a287dce8
+		summarizeBy: none
+		sourceColumn: FPOID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FPOStyleQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: c53985a8-ffea-4730-92b6-2affbbaaeb98
+		summarizeBy: sum
+		sourceColumn: FPOStyleQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column FPOStyleValue
+		dataType: double
+		lineageTag: 28cb862a-1e08-4969-a5f0-3ba5361f5d12
+		summarizeBy: sum
+		sourceColumn: FPOStyleValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column WorkflowTemplateID
+		dataType: string
+		lineageTag: 287ad3b8-6dd5-4d1d-b231-7729b3db2874
+		summarizeBy: none
+		sourceColumn: WorkflowTemplateID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition zCPO_STYLE_F = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("52.220.68.78", "zinfotrek"),
+				    dbo_zCPO_STYLE = Source{[Schema="dbo",Item="zCPO_STYLE"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(dbo_zCPO_STYLE, each ([RecordStatus] = "ACTIVE"))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

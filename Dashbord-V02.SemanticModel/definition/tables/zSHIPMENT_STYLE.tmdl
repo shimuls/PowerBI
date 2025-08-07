@@ -1,0 +1,53 @@
+table zSHIPMENT_STYLE
+	lineageTag: 0dac8ed3-77b1-4066-b458-b714eb228210
+
+	column ShipmentStyleID
+		dataType: string
+		lineageTag: 881bbe49-f614-4a6d-bf2b-253e2bf1fd6c
+		summarizeBy: none
+		sourceColumn: ShipmentStyleID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CPOStyleID
+		dataType: string
+		lineageTag: 8af49c96-8f00-4ba3-9c88-d0444ae65b5b
+		summarizeBy: none
+		sourceColumn: CPOStyleID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ShipmentID
+		dataType: string
+		lineageTag: 5ae220dc-bbff-41f3-b7d8-73678a1ecea3
+		summarizeBy: none
+		sourceColumn: ShipmentID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FactoryInvoiceSalesContractID
+		dataType: string
+		lineageTag: 629ae189-4a4d-4e92-b6d1-2b175dfcb553
+		summarizeBy: none
+		sourceColumn: FactoryInvoiceSalesContractID
+
+		annotation SummarizationSetBy = Automatic
+
+	column HSCode
+		dataType: string
+		lineageTag: 02cd262c-ce4a-4b48-a486-28afa8f39878
+		summarizeBy: none
+		sourceColumn: HSCode
+
+		annotation SummarizationSetBy = Automatic
+
+	partition zSHIPMENT_STYLE = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("52.220.68.78"),
+				    zinfotrek = Source{[Name="zinfotrek"]}[Data],
+				    dbo_zSHIPMENT_STYLE = zinfotrek{[Schema="dbo",Item="zSHIPMENT_STYLE"]}[Data]
+				in
+				    dbo_zSHIPMENT_STYLE
+

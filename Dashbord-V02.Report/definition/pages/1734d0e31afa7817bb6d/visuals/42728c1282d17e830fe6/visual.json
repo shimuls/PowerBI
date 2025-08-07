@@ -1,0 +1,97 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "42728c1282d17e830fe6",
+  "position": {
+    "x": 328.67796610169489,
+    "y": 498.9830508474576,
+    "z": 0,
+    "height": 220.20338983050848,
+    "width": 149.69491525423729
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Factory"
+                    }
+                  },
+                  "Property": "TechnicalAuditRating"
+                }
+              },
+              "queryRef": "Audit_Factory.TechnicalAuditRating",
+              "nativeQueryRef": "Rating",
+              "displayName": "Rating"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Audit_Factory"
+                        }
+                      },
+                      "Property": "TechnicalAuditRating"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "CountNonNull(Audit_Factory.TechnicalAuditRating)",
+              "nativeQueryRef": "Count",
+              "displayName": "Count"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Audit_Factory"
+                  }
+                },
+                "Property": "TechnicalAuditRating"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Audit Rating'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

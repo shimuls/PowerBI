@@ -1,0 +1,376 @@
+table zCPO
+	lineageTag: f02ef6e7-6143-4d31-aea9-e0a72494245c
+
+	column RecordStatus
+		dataType: string
+		lineageTag: 2d30c230-b24f-4d3f-968b-05262c7ce5de
+		summarizeBy: none
+		sourceColumn: RecordStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: af6eceba-e838-4dd0-9a10-6aa190b0bcae
+		summarizeBy: none
+		sourceColumn: CreatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: 81317f0d-4641-4b79-9bcf-81160dc313ae
+			defaultHierarchy: LocalDateTable_8bdc8f48-c581-4f35-b8f6-c4a732b9f188.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 875c1502-9a5f-4326-89aa-86b38f7cd519
+		summarizeBy: none
+		sourceColumn: UpdatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: afea705e-c3d6-449c-b672-c31997d7fb37
+			defaultHierarchy: LocalDateTable_731d3ecf-b7e4-4ed8-a0b8-d3235ac66d1d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column CPOID
+		dataType: string
+		lineageTag: 71c15c4b-3dc1-479e-b168-9dcdce797eba
+		summarizeBy: none
+		sourceColumn: CPOID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CPONumber
+		dataType: string
+		lineageTag: 77796744-a538-4595-b491-7b62b8aefc87
+		summarizeBy: none
+		sourceColumn: CPONumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column RevisionNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 75234658-23d3-43fd-946f-ac3e5442d23b
+		summarizeBy: sum
+		sourceColumn: RevisionNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerOrderNumber
+		dataType: string
+		lineageTag: bdfcfbc9-1211-4129-9a3e-7a81c7a8b879
+		summarizeBy: none
+		sourceColumn: CustomerOrderNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderDiscountAmount
+		dataType: double
+		lineageTag: 3c2b8c65-c157-4d56-a24b-cbfefe241563
+		summarizeBy: sum
+		sourceColumn: OrderDiscountAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OrderDiscountPercentage
+		dataType: double
+		lineageTag: 1100d3f7-c0a7-4def-8914-5f4944eece38
+		summarizeBy: sum
+		sourceColumn: OrderDiscountPercentage
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column IsCMTOrder
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 585e32b4-1f07-4350-b028-1c849d73e3b8
+		summarizeBy: none
+		sourceColumn: IsCMTOrder
+
+		annotation SummarizationSetBy = Automatic
+
+	column AllowExtraPercentage
+		dataType: double
+		lineageTag: e453775d-fdb6-4cdf-ab02-50092c83f3c3
+		summarizeBy: sum
+		sourceColumn: AllowExtraPercentage
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Remarks
+		dataType: string
+		lineageTag: 174e21a6-1a00-48ce-a9c5-418829b62914
+		summarizeBy: none
+		sourceColumn: Remarks
+
+		annotation SummarizationSetBy = Automatic
+
+	column CPOValue
+		dataType: double
+		lineageTag: f5063b38-3fbe-4b68-977b-88dcebcaaf05
+		summarizeBy: sum
+		sourceColumn: CPOValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CPOQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 711143c3-6ba6-4696-8aea-aa9debca028b
+		summarizeBy: sum
+		sourceColumn: CPOQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column AQLTypeID
+		dataType: string
+		lineageTag: ce18448d-00d8-4bd8-9fa3-01a47dc10156
+		summarizeBy: none
+		sourceColumn: AQLTypeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CPOAmendmentReasonID
+		dataType: string
+		lineageTag: 0c5892c4-356c-4439-9393-4788a8f71ffa
+		summarizeBy: none
+		sourceColumn: CPOAmendmentReasonID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CPODiscountReasonID
+		dataType: string
+		lineageTag: 65b495ee-c206-4d4f-8b4f-ccbba978bf8a
+		summarizeBy: none
+		sourceColumn: CPODiscountReasonID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CPOStatusID
+		dataType: string
+		lineageTag: 91b20877-8ba7-4238-975b-40efcebe405b
+		summarizeBy: none
+		sourceColumn: CPOStatusID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CPOTypeID
+		dataType: string
+		lineageTag: 40f5f25a-bb05-473a-8d83-2a7c60f06522
+		summarizeBy: none
+		sourceColumn: CPOTypeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedByUserID
+		dataType: string
+		lineageTag: 45e33846-6d1b-40a0-89a2-a9eeadcaf358
+		summarizeBy: none
+		sourceColumn: CreatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrencyID
+		dataType: string
+		lineageTag: b1ba1d8c-e5a5-45d3-b070-0198f48554cd
+		summarizeBy: none
+		sourceColumn: CurrencyID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerID
+		dataType: string
+		lineageTag: a1b70401-3912-4ed3-8ffe-350a7f50d8cf
+		summarizeBy: none
+		sourceColumn: CustomerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DestinationPortID
+		dataType: string
+		lineageTag: 35a48f7c-36f1-4da8-a40d-2337715aae94
+		summarizeBy: none
+		sourceColumn: DestinationPortID
+
+		annotation SummarizationSetBy = Automatic
+
+	column OriginPortID
+		dataType: string
+		lineageTag: 1d84c8dc-4a69-4216-850c-6441879378ce
+		summarizeBy: none
+		sourceColumn: OriginPortID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PackingTypeID
+		dataType: string
+		lineageTag: 4f12b46f-08dc-47b8-8c32-07a3cfdaa6e5
+		summarizeBy: none
+		sourceColumn: PackingTypeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PaymentTermsID
+		dataType: string
+		lineageTag: a56f4a9b-04ae-41b6-948a-812c50cdf796
+		summarizeBy: none
+		sourceColumn: PaymentTermsID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PIID
+		dataType: string
+		lineageTag: f885de0f-8e85-48bd-902d-d51ce269fc2c
+		summarizeBy: none
+		sourceColumn: PIID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ShipmentModeID
+		dataType: string
+		lineageTag: 7ef4cd37-e9d0-4486-bef5-f295185d2b25
+		summarizeBy: none
+		sourceColumn: ShipmentModeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ShipmentTermsID
+		dataType: string
+		lineageTag: 6e397e63-e1be-4274-9da9-2dee0a7d40b1
+		summarizeBy: none
+		sourceColumn: ShipmentTermsID
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedByUserID
+		dataType: string
+		lineageTag: 54570993-2cba-4d93-bc13-55950dbc4fdc
+		summarizeBy: none
+		sourceColumn: UpdatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderReceivedDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 63987e52-370e-49ed-a769-bc49bfd4b85e
+		summarizeBy: none
+		sourceColumn: OrderReceivedDate
+
+		variation Variation
+			isDefault
+			relationship: 0b06acbf-b7e8-423d-b2a0-29f1c07173f5
+			defaultHierarchy: LocalDateTable_1473583b-acb4-49f2-984f-1688e26858f9.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CountryOfOriginID
+		dataType: string
+		lineageTag: b065b58d-45af-4645-87ef-ea8fe7bb5009
+		summarizeBy: none
+		sourceColumn: CountryOfOriginID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ConsigneeID
+		dataType: string
+		lineageTag: 43baae78-85ae-49ce-a2c6-257b33cfdd64
+		summarizeBy: none
+		sourceColumn: ConsigneeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column NotifyPartylD
+		dataType: string
+		lineageTag: 69e3b059-6d35-4da0-89e3-6ab6e6bc5ee7
+		summarizeBy: none
+		sourceColumn: NotifyPartylD
+
+		annotation SummarizationSetBy = Automatic
+
+	column CPODate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: cabbc53f-3882-4b21-a329-52f42fa92372
+		summarizeBy: none
+		sourceColumn: CPODate
+
+		variation Variation
+			isDefault
+			relationship: b6ba4ccd-5474-41b5-9d31-08ff60e06487
+			defaultHierarchy: LocalDateTable_be363410-b8b5-4866-a602-74595cafbb35.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CMTPaymentTypeID
+		dataType: string
+		lineageTag: cdc38b4c-5a53-4aa9-a680-0fe70fc41bd1
+		summarizeBy: none
+		sourceColumn: CMTPaymentTypeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerPaymentMethodID
+		dataType: string
+		lineageTag: 15344cc9-28b8-46b9-b438-1624ce3909b4
+		summarizeBy: none
+		sourceColumn: CustomerPaymentMethodID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryOfDestinationID
+		dataType: string
+		lineageTag: 76c422df-4f78-4515-a38e-d7accc139604
+		summarizeBy: none
+		sourceColumn: CountryOfDestinationID
+
+		annotation SummarizationSetBy = Automatic
+
+	column WebOrderNumber
+		dataType: string
+		lineageTag: 21c3c4f8-906c-410b-bc80-004db0c39d6b
+		summarizeBy: none
+		sourceColumn: WebOrderNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrganisationStructureID
+		dataType: string
+		lineageTag: 1978f965-a80a-4d14-b43d-b2f268c4591b
+		summarizeBy: none
+		sourceColumn: OrganisationStructureID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition zCPO = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("52.220.68.78", "zinfotrek"),
+				    dbo_zCPO = Source{[Schema="dbo",Item="zCPO"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(dbo_zCPO, each ([RecordStatus] = "ACTIVE"))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

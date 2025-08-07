@@ -1,0 +1,257 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "0c6b45e9f4065ec6bc8c",
+  "position": {
+    "x": 0,
+    "y": 124.7457627118644,
+    "z": 10000,
+    "height": 320,
+    "width": 1280,
+    "tabOrder": 10000
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FiscalYear2020_2039"
+                    }
+                  },
+                  "Property": "Fiscal Year"
+                }
+              },
+              "queryRef": "FiscalYear2020_2039.Fiscal Year",
+              "nativeQueryRef": "Fiscal Year",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "StyleWiseShipment"
+                    }
+                  },
+                  "Property": "FactoryName"
+                }
+              },
+              "queryRef": "StyleWiseShipment.FactoryName",
+              "nativeQueryRef": "FactoryName",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "StyleWiseShipment"
+                        }
+                      },
+                      "Property": "FactoryInvoiceReference"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(StyleWiseShipment.FactoryInvoiceReference)",
+              "nativeQueryRef": "FactoryInvoiceReference",
+              "displayName": "FactoryInvoiceReference"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "StyleWiseShipment"
+                        }
+                      },
+                      "Property": "SKUShipQuantity"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(StyleWiseShipment.SKUShipQuantity)",
+              "nativeQueryRef": "Shipped Quantity",
+              "displayName": "Shipped Quantity"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "StyleWiseShipment"
+                        }
+                      },
+                      "Property": "Expr1"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(StyleWiseShipment.Expr1)",
+              "nativeQueryRef": "Shipped Value",
+              "displayName": "Shipped Value"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "StyleWiseShipment"
+                        }
+                      },
+                      "Property": "CPOSKUQuantity"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(StyleWiseShipment.CPOSKUQuantity)",
+              "nativeQueryRef": "Order Quantity",
+              "displayName": "Order Quantity"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "StyleWiseShipment"
+                        }
+                      },
+                      "Property": "CPOSKUValue"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(StyleWiseShipment.CPOSKUValue)",
+              "nativeQueryRef": "Order Value",
+              "displayName": "Order Value"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "StyleWiseShipment"
+                        }
+                      },
+                      "Property": "FPOSKUQuantity"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(StyleWiseShipment.FPOSKUQuantity)",
+              "nativeQueryRef": "Factory Quantity",
+              "displayName": "Factory Quantity"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "StyleWiseShipment"
+                        }
+                      },
+                      "Property": "FPOSKUValue"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(StyleWiseShipment.FPOSKUValue)",
+              "nativeQueryRef": "Factory Value",
+              "displayName": "Factory Value"
+            }
+          ]
+        }
+      }
+    },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "FiscalYear2020_2039.Fiscal Year"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FiscalYear2020_2039"
+                    }
+                  },
+                  "Property": "Fiscal Year"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "StyleWiseShipment.FactoryName"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'2020 - 2021'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'2025 - 2026'"
+                  }
+                }
+              ],
+              "isToggled": true
+            }
+          ]
+        }
+      }
+    ],
+    "drillFilterOtherVisuals": true
+  }
+}

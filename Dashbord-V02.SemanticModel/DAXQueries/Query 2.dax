@@ -1,0 +1,455 @@
+EVALUATE
+	UNION(
+		ROW(
+			"Table", "zCPO_STYLE_DELIVERY_F",
+			"Column", "RecordStatus",
+			"Count", COUNT('zCPO_STYLE_DELIVERY_F'[RecordStatus]),
+			"Distinct Values", DISTINCTCOUNTNOBLANK('zCPO_STYLE_DELIVERY_F'[RecordStatus]),
+			"Null Count", COUNTROWS('zCPO_STYLE_DELIVERY_F') - COUNT('zCPO_STYLE_DELIVERY_F'[RecordStatus]),
+			"Min", MIN('zCPO_STYLE_DELIVERY_F'[RecordStatus]),
+			"Max", MAX('zCPO_STYLE_DELIVERY_F'[RecordStatus]),
+			"Median", "N/A",
+			"Mean", "N/A",
+			"Standard Deviation", "N/A",
+			"Zeros", "N/A",
+			"Evens", "N/A",
+			"Odds", "N/A",
+			"P25", "N/A",
+			"P75", "N/A",
+			"Range in Days", "N/A",
+			"Range in Months", "N/A",
+			"Range in Years", "N/A"
+		),
+		ROW(
+			"Table", "zCPO_STYLE_DELIVERY_F",
+			"Column", "CreatedOnDate",
+			"Count", COUNT('zCPO_STYLE_DELIVERY_F'[CreatedOnDate]),
+			"Distinct Values", DISTINCTCOUNTNOBLANK('zCPO_STYLE_DELIVERY_F'[CreatedOnDate]),
+			"Null Count", COUNTROWS('zCPO_STYLE_DELIVERY_F') - COUNT('zCPO_STYLE_DELIVERY_F'[CreatedOnDate]),
+			"Min", MIN('zCPO_STYLE_DELIVERY_F'[CreatedOnDate]),
+			"Max", MAX('zCPO_STYLE_DELIVERY_F'[CreatedOnDate]),
+			"Median", "N/A",
+			"Mean", "N/A",
+			"Standard Deviation", "N/A",
+			"Zeros", COALESCE(
+				COUNTROWS(FILTER(
+					'zCPO_STYLE_DELIVERY_F',
+					'zCPO_STYLE_DELIVERY_F'[CreatedOnDate] = 0
+				)),
+				0
+			),
+			"Evens", "N/A",
+			"Odds", "N/A",
+			"P25", "N/A",
+			"P75", "N/A",
+			"Range in Days", DATEDIFF(
+				MIN('zCPO_STYLE_DELIVERY_F'[CreatedOnDate]),
+				MAX('zCPO_STYLE_DELIVERY_F'[CreatedOnDate]),
+				DAY
+			),
+			"Range in Months", DATEDIFF(
+				MIN('zCPO_STYLE_DELIVERY_F'[CreatedOnDate]),
+				MAX('zCPO_STYLE_DELIVERY_F'[CreatedOnDate]),
+				MONTH
+			),
+			"Range in Years", DATEDIFF(
+				MIN('zCPO_STYLE_DELIVERY_F'[CreatedOnDate]),
+				MAX('zCPO_STYLE_DELIVERY_F'[CreatedOnDate]),
+				YEAR
+			)
+		),
+		ROW(
+			"Table", "zCPO_STYLE_DELIVERY_F",
+			"Column", "UpdatedOnDate",
+			"Count", COUNT('zCPO_STYLE_DELIVERY_F'[UpdatedOnDate]),
+			"Distinct Values", DISTINCTCOUNTNOBLANK('zCPO_STYLE_DELIVERY_F'[UpdatedOnDate]),
+			"Null Count", COUNTROWS('zCPO_STYLE_DELIVERY_F') - COUNT('zCPO_STYLE_DELIVERY_F'[UpdatedOnDate]),
+			"Min", MIN('zCPO_STYLE_DELIVERY_F'[UpdatedOnDate]),
+			"Max", MAX('zCPO_STYLE_DELIVERY_F'[UpdatedOnDate]),
+			"Median", "N/A",
+			"Mean", "N/A",
+			"Standard Deviation", "N/A",
+			"Zeros", COALESCE(
+				COUNTROWS(FILTER(
+					'zCPO_STYLE_DELIVERY_F',
+					'zCPO_STYLE_DELIVERY_F'[UpdatedOnDate] = 0
+				)),
+				0
+			),
+			"Evens", "N/A",
+			"Odds", "N/A",
+			"P25", "N/A",
+			"P75", "N/A",
+			"Range in Days", DATEDIFF(
+				MIN('zCPO_STYLE_DELIVERY_F'[UpdatedOnDate]),
+				MAX('zCPO_STYLE_DELIVERY_F'[UpdatedOnDate]),
+				DAY
+			),
+			"Range in Months", DATEDIFF(
+				MIN('zCPO_STYLE_DELIVERY_F'[UpdatedOnDate]),
+				MAX('zCPO_STYLE_DELIVERY_F'[UpdatedOnDate]),
+				MONTH
+			),
+			"Range in Years", DATEDIFF(
+				MIN('zCPO_STYLE_DELIVERY_F'[UpdatedOnDate]),
+				MAX('zCPO_STYLE_DELIVERY_F'[UpdatedOnDate]),
+				YEAR
+			)
+		),
+		ROW(
+			"Table", "zCPO_STYLE_DELIVERY_F",
+			"Column", "CPOStyleDeliveryID",
+			"Count", COUNT('zCPO_STYLE_DELIVERY_F'[CPOStyleDeliveryID]),
+			"Distinct Values", DISTINCTCOUNTNOBLANK('zCPO_STYLE_DELIVERY_F'[CPOStyleDeliveryID]),
+			"Null Count", COUNTROWS('zCPO_STYLE_DELIVERY_F') - COUNT('zCPO_STYLE_DELIVERY_F'[CPOStyleDeliveryID]),
+			"Min", MIN('zCPO_STYLE_DELIVERY_F'[CPOStyleDeliveryID]),
+			"Max", MAX('zCPO_STYLE_DELIVERY_F'[CPOStyleDeliveryID]),
+			"Median", "N/A",
+			"Mean", "N/A",
+			"Standard Deviation", "N/A",
+			"Zeros", "N/A",
+			"Evens", "N/A",
+			"Odds", "N/A",
+			"P25", "N/A",
+			"P75", "N/A",
+			"Range in Days", "N/A",
+			"Range in Months", "N/A",
+			"Range in Years", "N/A"
+		),
+		ROW(
+			"Table", "zCPO_STYLE_DELIVERY_F",
+			"Column", "CustomerDeliveryDate",
+			"Count", COUNT('zCPO_STYLE_DELIVERY_F'[CustomerDeliveryDate]),
+			"Distinct Values", DISTINCTCOUNTNOBLANK('zCPO_STYLE_DELIVERY_F'[CustomerDeliveryDate]),
+			"Null Count", COUNTROWS('zCPO_STYLE_DELIVERY_F') - COUNT('zCPO_STYLE_DELIVERY_F'[CustomerDeliveryDate]),
+			"Min", MIN('zCPO_STYLE_DELIVERY_F'[CustomerDeliveryDate]),
+			"Max", MAX('zCPO_STYLE_DELIVERY_F'[CustomerDeliveryDate]),
+			"Median", "N/A",
+			"Mean", "N/A",
+			"Standard Deviation", "N/A",
+			"Zeros", COALESCE(
+				COUNTROWS(FILTER(
+					'zCPO_STYLE_DELIVERY_F',
+					'zCPO_STYLE_DELIVERY_F'[CustomerDeliveryDate] = 0
+				)),
+				0
+			),
+			"Evens", "N/A",
+			"Odds", "N/A",
+			"P25", "N/A",
+			"P75", "N/A",
+			"Range in Days", DATEDIFF(
+				MIN('zCPO_STYLE_DELIVERY_F'[CustomerDeliveryDate]),
+				MAX('zCPO_STYLE_DELIVERY_F'[CustomerDeliveryDate]),
+				DAY
+			),
+			"Range in Months", DATEDIFF(
+				MIN('zCPO_STYLE_DELIVERY_F'[CustomerDeliveryDate]),
+				MAX('zCPO_STYLE_DELIVERY_F'[CustomerDeliveryDate]),
+				MONTH
+			),
+			"Range in Years", DATEDIFF(
+				MIN('zCPO_STYLE_DELIVERY_F'[CustomerDeliveryDate]),
+				MAX('zCPO_STYLE_DELIVERY_F'[CustomerDeliveryDate]),
+				YEAR
+			)
+		),
+		ROW(
+			"Table", "zCPO_STYLE_DELIVERY_F",
+			"Column", "CPOStyleQuantity",
+			"Count", COUNT('zCPO_STYLE_DELIVERY_F'[CPOStyleQuantity]),
+			"Distinct Values", DISTINCTCOUNTNOBLANK('zCPO_STYLE_DELIVERY_F'[CPOStyleQuantity]),
+			"Null Count", COUNTROWS('zCPO_STYLE_DELIVERY_F') - COUNT('zCPO_STYLE_DELIVERY_F'[CPOStyleQuantity]),
+			"Min", MIN('zCPO_STYLE_DELIVERY_F'[CPOStyleQuantity]),
+			"Max", MAX('zCPO_STYLE_DELIVERY_F'[CPOStyleQuantity]),
+			"Median", MEDIAN('zCPO_STYLE_DELIVERY_F'[CPOStyleQuantity]),
+			"Mean", AVERAGE('zCPO_STYLE_DELIVERY_F'[CPOStyleQuantity]),
+			"Standard Deviation", STDEV.P('zCPO_STYLE_DELIVERY_F'[CPOStyleQuantity]),
+			"Zeros", COALESCE(
+				COUNTROWS(FILTER(
+					'zCPO_STYLE_DELIVERY_F',
+					'zCPO_STYLE_DELIVERY_F'[CPOStyleQuantity] = 0
+				)),
+				0
+			),
+			"Evens", COALESCE(
+				COUNTROWS(FILTER(
+					'zCPO_STYLE_DELIVERY_F',
+					MOD(
+						'zCPO_STYLE_DELIVERY_F'[CPOStyleQuantity],
+						2
+					) = 0
+				)),
+				0
+			),
+			"Odds", COALESCE(
+				COUNTROWS(FILTER(
+					'zCPO_STYLE_DELIVERY_F',
+					MOD(
+						'zCPO_STYLE_DELIVERY_F'[CPOStyleQuantity],
+						2
+					) <> 0
+				)),
+				0
+			),
+			"P25", PERCENTILE.INC(
+				'zCPO_STYLE_DELIVERY_F'[CPOStyleQuantity],
+				0.25
+			),
+			"P75", PERCENTILE.INC(
+				'zCPO_STYLE_DELIVERY_F'[CPOStyleQuantity],
+				0.75
+			),
+			"Range in Days", "N/A",
+			"Range in Months", "N/A",
+			"Range in Years", "N/A"
+		),
+		ROW(
+			"Table", "zCPO_STYLE_DELIVERY_F",
+			"Column", "CPOStyleValue",
+			"Count", COUNT('zCPO_STYLE_DELIVERY_F'[CPOStyleValue]),
+			"Distinct Values", DISTINCTCOUNTNOBLANK('zCPO_STYLE_DELIVERY_F'[CPOStyleValue]),
+			"Null Count", COUNTROWS('zCPO_STYLE_DELIVERY_F') - COUNT('zCPO_STYLE_DELIVERY_F'[CPOStyleValue]),
+			"Min", MIN('zCPO_STYLE_DELIVERY_F'[CPOStyleValue]),
+			"Max", MAX('zCPO_STYLE_DELIVERY_F'[CPOStyleValue]),
+			"Median", MEDIAN('zCPO_STYLE_DELIVERY_F'[CPOStyleValue]),
+			"Mean", AVERAGE('zCPO_STYLE_DELIVERY_F'[CPOStyleValue]),
+			"Standard Deviation", STDEV.P('zCPO_STYLE_DELIVERY_F'[CPOStyleValue]),
+			"Zeros", COALESCE(
+				COUNTROWS(FILTER(
+					'zCPO_STYLE_DELIVERY_F',
+					'zCPO_STYLE_DELIVERY_F'[CPOStyleValue] = 0
+				)),
+				0
+			),
+			"Evens", COALESCE(
+				COUNTROWS(FILTER(
+					'zCPO_STYLE_DELIVERY_F',
+					MOD(
+						'zCPO_STYLE_DELIVERY_F'[CPOStyleValue],
+						2
+					) = 0
+				)),
+				0
+			),
+			"Odds", COALESCE(
+				COUNTROWS(FILTER(
+					'zCPO_STYLE_DELIVERY_F',
+					MOD(
+						'zCPO_STYLE_DELIVERY_F'[CPOStyleValue],
+						2
+					) <> 0
+				)),
+				0
+			),
+			"P25", PERCENTILE.INC(
+				'zCPO_STYLE_DELIVERY_F'[CPOStyleValue],
+				0.25
+			),
+			"P75", PERCENTILE.INC(
+				'zCPO_STYLE_DELIVERY_F'[CPOStyleValue],
+				0.75
+			),
+			"Range in Days", "N/A",
+			"Range in Months", "N/A",
+			"Range in Years", "N/A"
+		),
+		ROW(
+			"Table", "zCPO_STYLE_DELIVERY_F",
+			"Column", "FactoryDeliveryDate",
+			"Count", COUNT('zCPO_STYLE_DELIVERY_F'[FactoryDeliveryDate]),
+			"Distinct Values", DISTINCTCOUNTNOBLANK('zCPO_STYLE_DELIVERY_F'[FactoryDeliveryDate]),
+			"Null Count", COUNTROWS('zCPO_STYLE_DELIVERY_F') - COUNT('zCPO_STYLE_DELIVERY_F'[FactoryDeliveryDate]),
+			"Min", MIN('zCPO_STYLE_DELIVERY_F'[FactoryDeliveryDate]),
+			"Max", MAX('zCPO_STYLE_DELIVERY_F'[FactoryDeliveryDate]),
+			"Median", "N/A",
+			"Mean", "N/A",
+			"Standard Deviation", "N/A",
+			"Zeros", COALESCE(
+				COUNTROWS(FILTER(
+					'zCPO_STYLE_DELIVERY_F',
+					'zCPO_STYLE_DELIVERY_F'[FactoryDeliveryDate] = 0
+				)),
+				0
+			),
+			"Evens", "N/A",
+			"Odds", "N/A",
+			"P25", "N/A",
+			"P75", "N/A",
+			"Range in Days", DATEDIFF(
+				MIN('zCPO_STYLE_DELIVERY_F'[FactoryDeliveryDate]),
+				MAX('zCPO_STYLE_DELIVERY_F'[FactoryDeliveryDate]),
+				DAY
+			),
+			"Range in Months", DATEDIFF(
+				MIN('zCPO_STYLE_DELIVERY_F'[FactoryDeliveryDate]),
+				MAX('zCPO_STYLE_DELIVERY_F'[FactoryDeliveryDate]),
+				MONTH
+			),
+			"Range in Years", DATEDIFF(
+				MIN('zCPO_STYLE_DELIVERY_F'[FactoryDeliveryDate]),
+				MAX('zCPO_STYLE_DELIVERY_F'[FactoryDeliveryDate]),
+				YEAR
+			)
+		),
+		ROW(
+			"Table", "zCPO_STYLE_DELIVERY_F",
+			"Column", "FPOStyleQuantity",
+			"Count", COUNT('zCPO_STYLE_DELIVERY_F'[FPOStyleQuantity]),
+			"Distinct Values", DISTINCTCOUNTNOBLANK('zCPO_STYLE_DELIVERY_F'[FPOStyleQuantity]),
+			"Null Count", COUNTROWS('zCPO_STYLE_DELIVERY_F') - COUNT('zCPO_STYLE_DELIVERY_F'[FPOStyleQuantity]),
+			"Min", MIN('zCPO_STYLE_DELIVERY_F'[FPOStyleQuantity]),
+			"Max", MAX('zCPO_STYLE_DELIVERY_F'[FPOStyleQuantity]),
+			"Median", MEDIAN('zCPO_STYLE_DELIVERY_F'[FPOStyleQuantity]),
+			"Mean", AVERAGE('zCPO_STYLE_DELIVERY_F'[FPOStyleQuantity]),
+			"Standard Deviation", STDEV.P('zCPO_STYLE_DELIVERY_F'[FPOStyleQuantity]),
+			"Zeros", COALESCE(
+				COUNTROWS(FILTER(
+					'zCPO_STYLE_DELIVERY_F',
+					'zCPO_STYLE_DELIVERY_F'[FPOStyleQuantity] = 0
+				)),
+				0
+			),
+			"Evens", COALESCE(
+				COUNTROWS(FILTER(
+					'zCPO_STYLE_DELIVERY_F',
+					MOD(
+						'zCPO_STYLE_DELIVERY_F'[FPOStyleQuantity],
+						2
+					) = 0
+				)),
+				0
+			),
+			"Odds", COALESCE(
+				COUNTROWS(FILTER(
+					'zCPO_STYLE_DELIVERY_F',
+					MOD(
+						'zCPO_STYLE_DELIVERY_F'[FPOStyleQuantity],
+						2
+					) <> 0
+				)),
+				0
+			),
+			"P25", PERCENTILE.INC(
+				'zCPO_STYLE_DELIVERY_F'[FPOStyleQuantity],
+				0.25
+			),
+			"P75", PERCENTILE.INC(
+				'zCPO_STYLE_DELIVERY_F'[FPOStyleQuantity],
+				0.75
+			),
+			"Range in Days", "N/A",
+			"Range in Months", "N/A",
+			"Range in Years", "N/A"
+		),
+		ROW(
+			"Table", "zCPO_STYLE_DELIVERY_F",
+			"Column", "FPOStyleValue",
+			"Count", COUNT('zCPO_STYLE_DELIVERY_F'[FPOStyleValue]),
+			"Distinct Values", DISTINCTCOUNTNOBLANK('zCPO_STYLE_DELIVERY_F'[FPOStyleValue]),
+			"Null Count", COUNTROWS('zCPO_STYLE_DELIVERY_F') - COUNT('zCPO_STYLE_DELIVERY_F'[FPOStyleValue]),
+			"Min", MIN('zCPO_STYLE_DELIVERY_F'[FPOStyleValue]),
+			"Max", MAX('zCPO_STYLE_DELIVERY_F'[FPOStyleValue]),
+			"Median", MEDIAN('zCPO_STYLE_DELIVERY_F'[FPOStyleValue]),
+			"Mean", AVERAGE('zCPO_STYLE_DELIVERY_F'[FPOStyleValue]),
+			"Standard Deviation", STDEV.P('zCPO_STYLE_DELIVERY_F'[FPOStyleValue]),
+			"Zeros", COALESCE(
+				COUNTROWS(FILTER(
+					'zCPO_STYLE_DELIVERY_F',
+					'zCPO_STYLE_DELIVERY_F'[FPOStyleValue] = 0
+				)),
+				0
+			),
+			"Evens", COALESCE(
+				COUNTROWS(FILTER(
+					'zCPO_STYLE_DELIVERY_F',
+					MOD(
+						'zCPO_STYLE_DELIVERY_F'[FPOStyleValue],
+						2
+					) = 0
+				)),
+				0
+			),
+			"Odds", COALESCE(
+				COUNTROWS(FILTER(
+					'zCPO_STYLE_DELIVERY_F',
+					MOD(
+						'zCPO_STYLE_DELIVERY_F'[FPOStyleValue],
+						2
+					) <> 0
+				)),
+				0
+			),
+			"P25", PERCENTILE.INC(
+				'zCPO_STYLE_DELIVERY_F'[FPOStyleValue],
+				0.25
+			),
+			"P75", PERCENTILE.INC(
+				'zCPO_STYLE_DELIVERY_F'[FPOStyleValue],
+				0.75
+			),
+			"Range in Days", "N/A",
+			"Range in Months", "N/A",
+			"Range in Years", "N/A"
+		),
+		ROW(
+			"Table", "zCPO_STYLE_DELIVERY_F",
+			"Column", "CPOStyleID",
+			"Count", COUNT('zCPO_STYLE_DELIVERY_F'[CPOStyleID]),
+			"Distinct Values", DISTINCTCOUNTNOBLANK('zCPO_STYLE_DELIVERY_F'[CPOStyleID]),
+			"Null Count", COUNTROWS('zCPO_STYLE_DELIVERY_F') - COUNT('zCPO_STYLE_DELIVERY_F'[CPOStyleID]),
+			"Min", MIN('zCPO_STYLE_DELIVERY_F'[CPOStyleID]),
+			"Max", MAX('zCPO_STYLE_DELIVERY_F'[CPOStyleID]),
+			"Median", "N/A",
+			"Mean", "N/A",
+			"Standard Deviation", "N/A",
+			"Zeros", "N/A",
+			"Evens", "N/A",
+			"Odds", "N/A",
+			"P25", "N/A",
+			"P75", "N/A",
+			"Range in Days", "N/A",
+			"Range in Months", "N/A",
+			"Range in Years", "N/A"
+		),
+		ROW(
+			"Table", "zCPO_STYLE_DELIVERY_F",
+			"Column", "CreatedByUserID",
+			"Count", COUNT('zCPO_STYLE_DELIVERY_F'[CreatedByUserID]),
+			"Distinct Values", DISTINCTCOUNTNOBLANK('zCPO_STYLE_DELIVERY_F'[CreatedByUserID]),
+			"Null Count", COUNTROWS('zCPO_STYLE_DELIVERY_F') - COUNT('zCPO_STYLE_DELIVERY_F'[CreatedByUserID]),
+			"Min", MIN('zCPO_STYLE_DELIVERY_F'[CreatedByUserID]),
+			"Max", MAX('zCPO_STYLE_DELIVERY_F'[CreatedByUserID]),
+			"Median", "N/A",
+			"Mean", "N/A",
+			"Standard Deviation", "N/A",
+			"Zeros", "N/A",
+			"Evens", "N/A",
+			"Odds", "N/A",
+			"P25", "N/A",
+			"P75", "N/A",
+			"Range in Days", "N/A",
+			"Range in Months", "N/A",
+			"Range in Years", "N/A"
+		),
+		ROW(
+			"Table", "zCPO_STYLE_DELIVERY_F",
+			"Column", "UpdatedByUserID",
+			"Count", COUNT('zCPO_STYLE_DELIVERY_F'[UpdatedByUserID]),
+			"Distinct Values", DISTINCTCOUNTNOBLANK('zCPO_STYLE_DELIVERY_F'[UpdatedByUserID]),
+			"Null Count", COUNTROWS('zCPO_STYLE_DELIVERY_F') - COUNT('zCPO_STYLE_DELIVERY_F'[UpdatedByUserID]),
+			"Min", MIN('zCPO_STYLE_DELIVERY_F'[UpdatedByUserID]),
+			"Max", MAX('zCPO_STYLE_DELIVERY_F'[UpdatedByUserID]),
+			"Median", "N/A",
+			"Mean", "N/A",
+			"Standard Deviation", "N/A",
+			"Zeros", "N/A",
+			"Evens", "N/A",
+			"Odds", "N/A",
+			"P25", "N/A",
+			"P75", "N/A",
+			"Range in Days", "N/A",
+			"Range in Months", "N/A",
+			"Range in Years", "N/A"
+		)
+	)

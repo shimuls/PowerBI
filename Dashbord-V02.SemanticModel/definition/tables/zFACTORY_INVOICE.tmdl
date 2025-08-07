@@ -1,0 +1,361 @@
+table zFACTORY_INVOICE
+	lineageTag: 4942bfe2-603f-4e49-9ccd-d06a3ae1528a
+
+	column RecordStatus
+		dataType: string
+		lineageTag: f08f0ca3-3970-4128-b745-0d10ba646f91
+		summarizeBy: none
+		sourceColumn: RecordStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 99cc671a-9bc4-4705-b020-948f23085fed
+		summarizeBy: none
+		sourceColumn: CreatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: 63d5da7f-4012-4bab-892f-8f5b01b20ca0
+			defaultHierarchy: LocalDateTable_521a2903-0b2f-4932-bb25-8caef1f0a08b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1be6f3c4-abb6-4103-8c1b-8f50ea892bdc
+		summarizeBy: none
+		sourceColumn: UpdatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: 306e8c05-92b5-47ff-a94a-413960e3f08f
+			defaultHierarchy: LocalDateTable_2d013d3b-afc1-43c1-a789-01805095ba77.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column FactoryInvoiceID
+		dataType: string
+		lineageTag: 9f5f7e5d-f452-4ab0-93bd-a2c113ac7b0e
+		summarizeBy: none
+		sourceColumn: FactoryInvoiceID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FactoryInvoiceNumber
+		dataType: string
+		lineageTag: 41233f50-9ebf-4c95-b87d-7c50144b8d57
+		summarizeBy: none
+		sourceColumn: FactoryInvoiceNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalFactoryValue
+		dataType: double
+		lineageTag: d1cdf6a1-4b4c-4d0d-85c7-5fc9db35da76
+		summarizeBy: sum
+		sourceColumn: TotalFactoryValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CreatedByUserID
+		dataType: string
+		lineageTag: c7549d33-bc89-4a3f-ac5f-392e5517f812
+		summarizeBy: none
+		sourceColumn: CreatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerID
+		dataType: string
+		lineageTag: 13065573-12b0-4869-872a-3b82b71ab2f6
+		summarizeBy: none
+		sourceColumn: CustomerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerBankID
+		dataType: string
+		lineageTag: 3b4fb28e-f4fa-4b3b-bcb0-bc7a3f705ce6
+		summarizeBy: none
+		sourceColumn: CustomerBankID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FactoryID
+		dataType: string
+		lineageTag: 7a22f160-f8f6-41d5-884c-58f2bda280df
+		summarizeBy: none
+		sourceColumn: FactoryID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FactoryInvoiceStatusID
+		dataType: string
+		lineageTag: 53a4b90a-8651-493e-a2f2-5310e1e8af14
+		summarizeBy: none
+		sourceColumn: FactoryInvoiceStatusID
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedByUserID
+		dataType: string
+		lineageTag: 4199aa12-1ae7-4b7b-bfc9-52d3fdb0a5e0
+		summarizeBy: none
+		sourceColumn: UpdatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrencyID
+		dataType: string
+		lineageTag: 64557e19-f9ad-4d51-8356-e82deed3b46a
+		summarizeBy: none
+		sourceColumn: CurrencyID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FactoryInvoiceDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 4658ba16-65e8-4929-a3a3-562d0b0d0afa
+		summarizeBy: none
+		sourceColumn: FactoryInvoiceDate
+
+		variation Variation
+			isDefault
+			relationship: ccc38c27-b30c-43e1-9881-42f19ab0e18a
+			defaultHierarchy: LocalDateTable_f15bf2a1-d515-48d7-856f-dd8c081d669c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsCMTOrder
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: ec66bece-1e8d-4ff6-95f0-09244ebb467b
+		summarizeBy: none
+		sourceColumn: IsCMTOrder
+
+		annotation SummarizationSetBy = Automatic
+
+	column FactoryInvoiceReference
+		dataType: string
+		lineageTag: 6d886382-fed1-41ce-abec-89df9d922220
+		summarizeBy: none
+		sourceColumn: FactoryInvoiceReference
+
+		annotation SummarizationSetBy = Automatic
+
+	column Brand
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 66ff44bb-c66a-4665-98de-9bbea8e54652
+		summarizeBy: none
+		sourceColumn: Brand
+
+		annotation SummarizationSetBy = Automatic
+
+	column GenderRange
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 43a30a65-9fac-45fd-900e-f02610ec77f1
+		summarizeBy: none
+		sourceColumn: GenderRange
+
+		annotation SummarizationSetBy = Automatic
+
+	column MainCategory
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 8d147380-ddde-469d-a53d-c15fa555ce98
+		summarizeBy: none
+		sourceColumn: MainCategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductType
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: af69cc54-e932-406a-91c2-94c0ccb3a977
+		summarizeBy: none
+		sourceColumn: ProductType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Subcategory
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 2e6cca20-cbdb-43da-83e8-feaad8c56b91
+		summarizeBy: none
+		sourceColumn: Subcategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column MainFabric
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: cbbf26f1-1f18-4feb-b855-b8ead1fac4f1
+		summarizeBy: none
+		sourceColumn: MainFabric
+
+		annotation SummarizationSetBy = Automatic
+
+	column LCID
+		dataType: string
+		lineageTag: 68ae8093-82dd-47de-87f4-bcce253e85a0
+		summarizeBy: none
+		sourceColumn: LCID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActualPaymentTermsID
+		dataType: string
+		lineageTag: 53353a63-cebe-49d2-859c-0b8576056c77
+		summarizeBy: none
+		sourceColumn: ActualPaymentTermsID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerActualPaymentTermsID
+		dataType: string
+		lineageTag: 9bce838f-61fb-461f-b255-0c523986bb57
+		summarizeBy: none
+		sourceColumn: CustomerActualPaymentTermsID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerOriginalPaymentTermsID
+		dataType: string
+		lineageTag: c1d79a8d-44ae-49d9-80c2-fa27943c5333
+		summarizeBy: none
+		sourceColumn: CustomerOriginalPaymentTermsID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ETA
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e2ea6ff4-4162-48ff-90ef-67401073cdbf
+		summarizeBy: none
+		sourceColumn: ETA
+
+		variation Variation
+			isDefault
+			relationship: 8ec0e845-3c87-430a-99b7-eb82c12978cc
+			defaultHierarchy: LocalDateTable_87db6cd2-9c35-4f62-abde-13910240713f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ETD
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 89e1cd6a-6cc7-49c0-87de-ce3588ce4df3
+		summarizeBy: none
+		sourceColumn: ETD
+
+		annotation SummarizationSetBy = Automatic
+
+	column OriginalPaymentTermsID
+		dataType: string
+		lineageTag: 3d61cd06-372e-4143-a719-2801baa69182
+		summarizeBy: none
+		sourceColumn: OriginalPaymentTermsID
+
+		annotation SummarizationSetBy = Automatic
+
+	column AcceptanceReceivedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3342e6ab-2f3e-40ed-94d1-e6d79d4e8b9d
+		summarizeBy: none
+		sourceColumn: AcceptanceReceivedDate
+
+		variation Variation
+			isDefault
+			relationship: a2ebc9ee-3d1c-4e90-90ab-d42370f4ab74
+			defaultHierarchy: LocalDateTable_82a80daa-3448-49d2-bf77-d4e953b1f86d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column PaymentDueDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 14eb7ba6-16a5-476a-9575-9b3c643b0bb9
+		summarizeBy: none
+		sourceColumn: PaymentDueDate
+
+		variation Variation
+			isDefault
+			relationship: 9445d136-26a7-48d8-b5b0-1b67962a3be7
+			defaultHierarchy: LocalDateTable_0f072cbc-5b6c-4e3e-a26f-40698a9230dd.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tenure
+		dataType: int64
+		formatString: 0
+		lineageTag: 0da75986-623c-49d9-a2f3-94f3dcbbbe8f
+		summarizeBy: sum
+		sourceColumn: Tenure
+
+		annotation SummarizationSetBy = Automatic
+
+	column StyleName
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 305da8ab-0f68-48a5-a5eb-5a9364a39126
+		summarizeBy: none
+		sourceColumn: StyleName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActualPaymentDueDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7e1e0a86-f3b9-4222-8c74-0d50f073cb6f
+		summarizeBy: none
+		sourceColumn: ActualPaymentDueDate
+
+		variation Variation
+			isDefault
+			relationship: f6dc6e98-ae15-4992-863e-c38c9a2f16fe
+			defaultHierarchy: LocalDateTable_05134b40-71f0-451e-8346-79bcefe19465.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsPaymentRequestSent
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: c5c5987d-c9e4-4e5f-af8f-806200076784
+		summarizeBy: none
+		sourceColumn: IsPaymentRequestSent
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalShippedQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 92c0d144-2760-4dbd-8d71-625086c8beee
+		summarizeBy: sum
+		sourceColumn: TotalShippedQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+	partition zFACTORY_INVOICE = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("52.220.68.78", "zinfotrek"),
+				    dbo_zFACTORY_INVOICE = Source{[Schema="dbo",Item="zFACTORY_INVOICE"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(dbo_zFACTORY_INVOICE, each ([RecordStatus] <> "DELETED") and ([FactoryInvoiceStatusID] = "4E89433E-F36B-1410-896B-008CE78628F6"))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

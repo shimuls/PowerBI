@@ -1,0 +1,780 @@
+table zFACTORY
+	lineageTag: 161744be-c671-4812-95d5-83c5d8b6e2f9
+
+	column RecordStatus
+		dataType: string
+		lineageTag: 18309214-389d-40bb-9837-23ead85fcc81
+		summarizeBy: none
+		sourceColumn: RecordStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3f9c196a-33d8-44ef-aeb7-d1f7736efc1a
+		summarizeBy: none
+		sourceColumn: CreatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: 94f29941-c161-4af8-9c87-897dc091b916
+			defaultHierarchy: LocalDateTable_0bd654fb-a28b-4585-886d-0ee6f259a21b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2fd96f22-01bc-4feb-92ae-77236ada4c96
+		summarizeBy: none
+		sourceColumn: UpdatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: e312770c-ca0e-491f-983d-9d614f8fedf7
+			defaultHierarchy: LocalDateTable_33472510-d2e0-4bfc-a1aa-aff58dc58760.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column FactoryID
+		dataType: string
+		lineageTag: 87ce2620-d9c9-4b64-b3a5-9063c6931687
+		summarizeBy: none
+		sourceColumn: FactoryID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FactoryName
+		dataType: string
+		lineageTag: af4d09d5-737a-47ff-a070-0449f932c6a7
+		summarizeBy: none
+		sourceColumn: FactoryName
+
+		annotation SummarizationSetBy = Automatic
+
+	column FactoryShortName
+		dataType: string
+		lineageTag: 3feb553a-3e68-411a-9166-bfd0a8af242e
+		summarizeBy: none
+		sourceColumn: FactoryShortName
+
+		annotation SummarizationSetBy = Automatic
+
+	column OnboardingDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 41ad6315-35ba-4c05-98b0-d84b8ab754b1
+		summarizeBy: none
+		sourceColumn: OnboardingDate
+
+		variation Variation
+			isDefault
+			relationship: fa930fd3-75e5-4b58-90b3-fd9f1e9d3208
+			defaultHierarchy: LocalDateTable_64a6423c-c2ad-4dd2-be28-cb8d579ccd35.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column BillingAddressID
+		dataType: string
+		lineageTag: bb4b6c9e-42e7-413a-bc30-13fcd5259304
+		summarizeBy: none
+		sourceColumn: BillingAddressID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedByUserID
+		dataType: string
+		lineageTag: 98a68098-9b1b-48a5-b29a-c3120a73ff3b
+		summarizeBy: none
+		sourceColumn: CreatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FactoryGroupID
+		dataType: string
+		lineageTag: d542cb6f-52b9-4883-8e0b-db3fdacf2a7d
+		summarizeBy: none
+		sourceColumn: FactoryGroupID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FactoryStatusID
+		dataType: string
+		lineageTag: 77aa38da-8ab1-4684-82bc-139b5e276c2b
+		summarizeBy: none
+		sourceColumn: FactoryStatusID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ShippingAddressID
+		dataType: string
+		lineageTag: b491b6ae-cb69-4b9b-a69c-7c4e64fde567
+		summarizeBy: none
+		sourceColumn: ShippingAddressID
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedByUserID
+		dataType: string
+		lineageTag: 1f692b3d-95c4-4759-860c-b28eb9f635f8
+		summarizeBy: none
+		sourceColumn: UpdatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column AdditionalFactoryInformation
+		dataType: string
+		lineageTag: 5e3edd6b-f167-4b44-922d-31ca3c0d36f0
+		summarizeBy: none
+		sourceColumn: AdditionalFactoryInformation
+
+		annotation SummarizationSetBy = Automatic
+
+	column Belcha
+		dataType: string
+		lineageTag: 5f688920-662a-433f-89e4-5480f6dbca25
+		summarizeBy: none
+		sourceColumn: Belcha
+
+		annotation SummarizationSetBy = Automatic
+
+	column BestPracticesDescription
+		dataType: string
+		lineageTag: 55c853d5-6412-4eb0-9c87-879e8b71aa01
+		summarizeBy: none
+		sourceColumn: BestPracticesDescription
+
+		annotation SummarizationSetBy = Automatic
+
+	column BuildingApprovalAuthority
+		dataType: string
+		lineageTag: 34e77ae3-1ffc-40d2-b04c-fe10db61fd74
+		summarizeBy: none
+		sourceColumn: BuildingApprovalAuthority
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiningAreaSeatingCapacity
+		dataType: int64
+		formatString: 0
+		lineageTag: 2fb54101-5885-4749-8478-e0b54e3085ba
+		summarizeBy: sum
+		sourceColumn: DiningAreaSeatingCapacity
+
+		annotation SummarizationSetBy = Automatic
+
+	column DoctorsRegistrationNumber
+		dataType: string
+		lineageTag: eb222f22-ab65-43f3-9e59-3562f119993b
+		summarizeBy: none
+		sourceColumn: DoctorsRegistrationNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmergencyLight
+		dataType: string
+		lineageTag: 51f4cdba-5e28-4683-8cc0-256fc5756430
+		summarizeBy: none
+		sourceColumn: EmergencyLight
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmergencyStaircaseWidth
+		dataType: int64
+		formatString: 0
+		lineageTag: f6bbabfe-a972-4e41-a5be-8437abe3d41d
+		summarizeBy: sum
+		sourceColumn: EmergencyStaircaseWidth
+
+		annotation SummarizationSetBy = Automatic
+
+	column EPTCapacityM3
+		dataType: int64
+		formatString: 0
+		lineageTag: cb2bef8c-1875-4833-af3b-f062145d3553
+		summarizeBy: sum
+		sourceColumn: EPTCapacityM3
+
+		annotation SummarizationSetBy = Automatic
+
+	column FireAlarmSwitch
+		dataType: string
+		lineageTag: 2319f030-8b1e-466b-80de-c7940377dbee
+		summarizeBy: none
+		sourceColumn: FireAlarmSwitch
+
+		annotation SummarizationSetBy = Automatic
+
+	column FireBiter
+		dataType: string
+		lineageTag: f6992de4-9cd3-468e-9e7d-800432fc0057
+		summarizeBy: none
+		sourceColumn: FireBiter
+
+		annotation SummarizationSetBy = Automatic
+
+	column FireBlanket
+		dataType: string
+		lineageTag: 7503fdf0-6ca6-4c41-957d-e6950d3d3c30
+		summarizeBy: none
+		sourceColumn: FireBlanket
+
+		annotation SummarizationSetBy = Automatic
+
+	column FireHook
+		dataType: string
+		lineageTag: ab51a763-b760-49d6-8329-52b521d0cc21
+		summarizeBy: none
+		sourceColumn: FireHook
+
+		annotation SummarizationSetBy = Automatic
+
+	column FireHoseReel
+		dataType: string
+		lineageTag: 625ed040-9a36-4f5b-ab55-d3164919f593
+		summarizeBy: none
+		sourceColumn: FireHoseReel
+
+		annotation SummarizationSetBy = Automatic
+
+	column FireTrainingDoneBy
+		dataType: string
+		lineageTag: b13c7fe1-a610-444d-9679-742454c55210
+		summarizeBy: none
+		sourceColumn: FireTrainingDoneBy
+
+		annotation SummarizationSetBy = Automatic
+
+	column GaskMask
+		dataType: string
+		lineageTag: 920cb2ab-83ba-4c91-9726-89e5e39c7b20
+		summarizeBy: none
+		sourceColumn: GaskMask
+
+		annotation SummarizationSetBy = Automatic
+
+	column Goggles
+		dataType: string
+		lineageTag: f17f279b-351d-43b1-be33-9fc8d9dab21f
+		summarizeBy: none
+		sourceColumn: Goggles
+
+		annotation SummarizationSetBy = Automatic
+
+	column GongBell
+		dataType: string
+		lineageTag: aa2a96a7-381e-4af1-9fda-c2d047f79b6b
+		summarizeBy: none
+		sourceColumn: GongBell
+
+		annotation SummarizationSetBy = Automatic
+
+	column HandGloves
+		dataType: string
+		lineageTag: 953c801a-dd79-4e6e-b67c-5f600213b21c
+		summarizeBy: none
+		sourceColumn: HandGloves
+
+		annotation SummarizationSetBy = Automatic
+
+	column HasApprovedFactoryMachineLayoutPlan
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 6861801d-d959-4d53-a7a3-086ccdb2fe86
+		summarizeBy: none
+		sourceColumn: HasApprovedFactoryMachineLayoutPlan
+
+		annotation SummarizationSetBy = Automatic
+
+	column HasChildCareFacility
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 0a5b8752-30c0-4633-8fbc-384068f376e3
+		summarizeBy: none
+		sourceColumn: HasChildCareFacility
+
+		annotation SummarizationSetBy = Automatic
+
+	column HasContractualWorkers
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 1d644f24-a484-4c59-8302-8be5ee1c2641
+		summarizeBy: none
+		sourceColumn: HasContractualWorkers
+
+		annotation SummarizationSetBy = Automatic
+
+	column HasDiningArea
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 56eaa887-1847-4c4f-b571-bc740440372d
+		summarizeBy: none
+		sourceColumn: HasDiningArea
+
+		annotation SummarizationSetBy = Automatic
+
+	column HasDrinkingWaterFacility
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 0b25b71e-2d9b-4d6d-b770-48a00df1f8d6
+		summarizeBy: none
+		sourceColumn: HasDrinkingWaterFacility
+
+		annotation SummarizationSetBy = Automatic
+
+	column HasETP
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: ba0f9558-13d4-4d6f-8723-8b5ca6c7a05d
+		summarizeBy: none
+		sourceColumn: HasETP
+
+		annotation SummarizationSetBy = Automatic
+
+	column HasFullTimeDoctor
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 805de655-9ea3-44de-ae1c-0339596d786c
+		summarizeBy: none
+		sourceColumn: HasFullTimeDoctor
+
+		annotation SummarizationSetBy = Automatic
+
+	column HasFullTimeNurse
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: a69d4e8e-3201-4cde-bff5-f84b8c23ccf6
+		summarizeBy: none
+		sourceColumn: HasFullTimeNurse
+
+		annotation SummarizationSetBy = Automatic
+
+	column HasPaySlips
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: e4ac8948-f209-4e2f-8b98-069f7e65a86f
+		summarizeBy: none
+		sourceColumn: HasPaySlips
+
+		annotation SummarizationSetBy = Automatic
+
+	column HasWaterReserveTank
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 2e743a87-9162-4b0b-b405-9891906960c7
+		summarizeBy: none
+		sourceColumn: HasWaterReserveTank
+
+		annotation SummarizationSetBy = Automatic
+
+	column HasWelfareAssociationCommittee
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 3e7ee27b-9ffb-4a56-aa68-a9c6b58d1541
+		summarizeBy: none
+		sourceColumn: HasWelfareAssociationCommittee
+
+		annotation SummarizationSetBy = Automatic
+
+	column LunchBreakHours
+		dataType: int64
+		formatString: 0
+		lineageTag: 673a4ab3-2488-4d4d-857b-6346b48b8b7d
+		summarizeBy: sum
+		sourceColumn: LunchBreakHours
+
+		annotation SummarizationSetBy = Automatic
+
+	column MainStaircaseWidth
+		dataType: int64
+		formatString: 0
+		lineageTag: 7f637382-9aa0-47e5-bb9e-ec914a01d8b8
+		summarizeBy: sum
+		sourceColumn: MainStaircaseWidth
+
+		annotation SummarizationSetBy = Automatic
+
+	column MajorBuyers
+		dataType: string
+		lineageTag: 75477e2c-0ef4-4b9c-a773-b79e7a29389e
+		summarizeBy: none
+		sourceColumn: MajorBuyers
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthlyProductionCapacity
+		dataType: int64
+		formatString: 0
+		lineageTag: 39a158dd-f73b-4de5-a1f2-c0e4b131802a
+		summarizeBy: sum
+		sourceColumn: MonthlyProductionCapacity
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberEmergencyStaircasePerFloor
+		dataType: int64
+		formatString: 0
+		lineageTag: be7cbafa-5761-438d-8979-b7bd7da520dd
+		summarizeBy: sum
+		sourceColumn: NumberEmergencyStaircasePerFloor
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberOfFemaleWorkers
+		dataType: int64
+		formatString: 0
+		lineageTag: 0c948fba-e791-4607-a90c-06a2fa94fc88
+		summarizeBy: sum
+		sourceColumn: NumberOfFemaleWorkers
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberFireExtinguishers
+		dataType: int64
+		formatString: 0
+		lineageTag: 35cfdb79-91ac-4392-9e83-28f30889472d
+		summarizeBy: sum
+		sourceColumn: NumberFireExtinguishers
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberOfFireFighters
+		dataType: int64
+		formatString: 0
+		lineageTag: 66786b16-2101-4abe-b7b9-cc1344040274
+		summarizeBy: sum
+		sourceColumn: NumberOfFireFighters
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberFirstAidBoxes
+		dataType: int64
+		formatString: 0
+		lineageTag: c0b23374-127d-4915-b29a-5ca8f1248d6d
+		summarizeBy: sum
+		sourceColumn: NumberFirstAidBoxes
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberFirstAidPersonnel
+		dataType: int64
+		formatString: 0
+		lineageTag: 1d467bd0-ec53-4cee-8b91-83bb2b301b91
+		summarizeBy: sum
+		sourceColumn: NumberFirstAidPersonnel
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberOfLines
+		dataType: int64
+		formatString: 0
+		lineageTag: 92625a6a-7acc-4ff6-93bd-f665b48c8889
+		summarizeBy: sum
+		sourceColumn: NumberOfLines
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberOfMachines
+		dataType: int64
+		formatString: 0
+		lineageTag: dd8f895d-0263-41a3-8bc0-a52ee6e6e58a
+		summarizeBy: sum
+		sourceColumn: NumberOfMachines
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberOfMaleWorkers
+		dataType: int64
+		formatString: 0
+		lineageTag: be60afc7-c588-4214-b961-6db660fce78e
+		summarizeBy: sum
+		sourceColumn: NumberOfMaleWorkers
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberOfManagement
+		dataType: int64
+		formatString: 0
+		lineageTag: a54072b9-b74c-439d-9133-15118f4346a0
+		summarizeBy: sum
+		sourceColumn: NumberOfManagement
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberOfNonManagementFemaleEmployees
+		dataType: int64
+		formatString: 0
+		lineageTag: 05bbba23-dc06-4178-9f5e-a8720cd9ac0f
+		summarizeBy: sum
+		sourceColumn: NumberOfNonManagementFemaleEmployees
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberOfNonManagementMaleEmployees
+		dataType: int64
+		formatString: 0
+		lineageTag: d0e305cd-e528-4a89-8689-73eaf677a52d
+		summarizeBy: sum
+		sourceColumn: NumberOfNonManagementMaleEmployees
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberOfSuggestionBoxes
+		dataType: int64
+		formatString: 0
+		lineageTag: 6e41f9b5-5ab8-4540-be08-37546394c462
+		summarizeBy: sum
+		sourceColumn: NumberOfSuggestionBoxes
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberOfTables
+		dataType: int64
+		formatString: 0
+		lineageTag: da130b17-890e-497b-a366-248f7367f571
+		summarizeBy: sum
+		sourceColumn: NumberOfTables
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumerOfWorkingDaysPerWeek
+		dataType: int64
+		formatString: 0
+		lineageTag: d2d78dc6-df04-44f1-9c63-0dc7c1dd10b9
+		summarizeBy: sum
+		sourceColumn: NumerOfWorkingDaysPerWeek
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberOfWorkingHoursPerDay
+		dataType: int64
+		formatString: 0
+		lineageTag: 8bb8516c-44f2-4628-811b-6ac9a25b3353
+		summarizeBy: sum
+		sourceColumn: NumberOfWorkingHoursPerDay
+
+		annotation SummarizationSetBy = Automatic
+
+	column OperatingShiftDetails
+		dataType: string
+		lineageTag: bcb1d9cd-4935-4ab7-8182-9bd0fd030d6e
+		summarizeBy: none
+		sourceColumn: OperatingShiftDetails
+
+		annotation SummarizationSetBy = Automatic
+
+	column PaymentPeriodInDays
+		dataType: int64
+		formatString: 0
+		lineageTag: b75bd80a-0bb5-4687-9251-d81ec9fe07bf
+		summarizeBy: sum
+		sourceColumn: PaymentPeriodInDays
+
+		annotation SummarizationSetBy = Automatic
+
+	column SmokeDetector
+		dataType: string
+		lineageTag: 4aec2572-c860-46af-bc1c-86ee14cb40b5
+		summarizeBy: none
+		sourceColumn: SmokeDetector
+
+		annotation SummarizationSetBy = Automatic
+
+	column Stretcher
+		dataType: string
+		lineageTag: 0f506c21-002b-4f29-aa71-333251b8928e
+		summarizeBy: none
+		sourceColumn: Stretcher
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeKeepingSystem
+		dataType: string
+		lineageTag: b56ec368-b21a-43c8-a1d2-a7d41733dc77
+		summarizeBy: none
+		sourceColumn: TimeKeepingSystem
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalLandArea
+		dataType: int64
+		formatString: 0
+		lineageTag: 66b677f4-45e9-43dd-ab6f-8b059499ced2
+		summarizeBy: sum
+		sourceColumn: TotalLandArea
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalNumberOfEmployees
+		dataType: int64
+		formatString: 0
+		lineageTag: 208ff411-e174-4afb-9591-51b8e841cea3
+		summarizeBy: sum
+		sourceColumn: TotalNumberOfEmployees
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalNumberOfToilets
+		dataType: int64
+		formatString: 0
+		lineageTag: 3640422e-be5a-43d6-ace5-bf962b1a8406
+		summarizeBy: sum
+		sourceColumn: TotalNumberOfToilets
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalProductionArea
+		dataType: int64
+		formatString: 0
+		lineageTag: 4081aeaf-37f7-4c93-a715-6ab6131e937d
+		summarizeBy: sum
+		sourceColumn: TotalProductionArea
+
+		annotation SummarizationSetBy = Automatic
+
+	column VisualFireAlarm
+		dataType: string
+		lineageTag: f5492262-35cd-470c-836a-1283b1ea294e
+		summarizeBy: none
+		sourceColumn: VisualFireAlarm
+
+		annotation SummarizationSetBy = Automatic
+
+	column WaterBucket
+		dataType: string
+		lineageTag: 1a5d5447-771d-463b-8d3e-3dedb83db5c7
+		summarizeBy: none
+		sourceColumn: WaterBucket
+
+		annotation SummarizationSetBy = Automatic
+
+	column WaterDrum
+		dataType: string
+		lineageTag: a8769ae9-00b3-4183-918f-d1675076132f
+		summarizeBy: none
+		sourceColumn: WaterDrum
+
+		annotation SummarizationSetBy = Automatic
+
+	column WaterReserveTankCapacity
+		dataType: int64
+		formatString: 0
+		lineageTag: 011ed44d-6a91-447a-980e-9891b8f70ae8
+		summarizeBy: sum
+		sourceColumn: WaterReserveTankCapacity
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkingHoursFrom
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: 3fa053d6-0d54-4fd7-9f13-3ac5f003b4df
+		summarizeBy: none
+		sourceColumn: WorkingHoursFrom
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column WorkingHoursTo
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: 98605093-bf1e-4f90-84c2-29171211b762
+		summarizeBy: none
+		sourceColumn: WorkingHoursTo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column YearsInOperation
+		dataType: int64
+		formatString: 0
+		lineageTag: 1930a672-c04a-4fef-ae11-6b3892d21017
+		summarizeBy: sum
+		sourceColumn: YearsInOperation
+
+		annotation SummarizationSetBy = Automatic
+
+	column FactoryREXCode
+		dataType: string
+		lineageTag: 0e3bcb0a-8fdb-4fd3-ac09-1beea183d411
+		summarizeBy: none
+		sourceColumn: FactoryREXCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column LockCutter
+		dataType: string
+		lineageTag: a865329a-1247-4888-b369-c20e079d611f
+		summarizeBy: none
+		sourceColumn: LockCutter
+
+		annotation SummarizationSetBy = Automatic
+
+	column PortOfArrivalID
+		dataType: string
+		lineageTag: f31b3aab-c7e7-4ffb-a98e-f56f80160e20
+		summarizeBy: none
+		sourceColumn: PortOfArrivalID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PortOfLoadingID
+		dataType: string
+		lineageTag: e4669404-c9b1-4e40-a3e2-141e22ba991c
+		summarizeBy: none
+		sourceColumn: PortOfLoadingID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryID
+		dataType: string
+		lineageTag: 4aea6225-9c06-497a-8e19-8aa913ca2573
+		summarizeBy: none
+		sourceColumn: CountryID
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberOfManagementFemaleEmployees
+		dataType: int64
+		formatString: 0
+		lineageTag: 922f209b-1bf3-4985-bad2-522cd6962af0
+		summarizeBy: sum
+		sourceColumn: NumberOfManagementFemaleEmployees
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberOfManagementMaleEmployees
+		dataType: int64
+		formatString: 0
+		lineageTag: a31d1ef1-12b4-4d39-8011-822a0bfaa292
+		summarizeBy: sum
+		sourceColumn: NumberOfManagementMaleEmployees
+
+		annotation SummarizationSetBy = Automatic
+
+	column HasPartTimeDoctor
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 1a7adca5-83a9-4f5c-87cf-00e237ae82c5
+		summarizeBy: none
+		sourceColumn: HasPartTimeDoctor
+
+		annotation SummarizationSetBy = Automatic
+
+	partition zFACTORY = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("52.220.68.78", "zinfotrek"),
+				    dbo_zFACTORY = Source{[Schema="dbo",Item="zFACTORY"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(dbo_zFACTORY, each ([RecordStatus] = "ACTIVE"))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

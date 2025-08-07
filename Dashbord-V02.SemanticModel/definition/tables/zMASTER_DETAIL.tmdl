@@ -1,0 +1,110 @@
+table zMASTER_DETAIL
+	lineageTag: 209178be-1732-4e7d-87ba-e216aabd1343
+
+	column RecordStatus
+		dataType: string
+		lineageTag: ab6d1731-8723-4376-9879-c1f9f2b3d210
+		summarizeBy: none
+		sourceColumn: RecordStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 4f3d0130-0092-4b8d-90bf-7b6d5e106171
+		summarizeBy: none
+		sourceColumn: CreatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: 2371daaf-3826-45b8-baae-c347bd078f5b
+			defaultHierarchy: LocalDateTable_dc28a89b-51a0-4593-9072-9f00dbf883e7.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c380f69e-a436-412a-a16b-de2505a54c21
+		summarizeBy: none
+		sourceColumn: UpdatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: 46c17edd-78c0-4d78-a804-31dc9afb4571
+			defaultHierarchy: LocalDateTable_3cdcae04-4f6f-4bea-ac77-80bfc857b233.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column MasterDetailID
+		dataType: string
+		lineageTag: 9531bcf4-4a8d-4fb8-a30f-8cb07f9d26cc
+		summarizeBy: none
+		sourceColumn: MasterDetailID
+
+		annotation SummarizationSetBy = Automatic
+
+	column MasterValue
+		dataType: string
+		lineageTag: 3ca7978a-ecca-469f-9660-29b3a89183a9
+		summarizeBy: none
+		sourceColumn: MasterValue
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsDefault
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 768ce533-b953-4fa3-a9b9-55001e3d06ab
+		summarizeBy: none
+		sourceColumn: IsDefault
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedByUserID
+		dataType: string
+		lineageTag: 97802d26-43d3-4b93-a0df-dd87a88e0b0d
+		summarizeBy: none
+		sourceColumn: CreatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column MasterID
+		dataType: string
+		lineageTag: 455338d8-f855-448d-8506-f431b4d8fbb8
+		summarizeBy: none
+		sourceColumn: MasterID
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedByUserID
+		dataType: string
+		lineageTag: f2773841-28b8-46e0-9847-151b00739158
+		summarizeBy: none
+		sourceColumn: UpdatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SapCode
+		dataType: string
+		lineageTag: cb6c2f6b-1709-4f7f-b57d-187e3cbeec53
+		summarizeBy: none
+		sourceColumn: SapCode
+
+		annotation SummarizationSetBy = Automatic
+
+	partition zMASTER_DETAIL = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("52.220.68.78", "zinfotrek"),
+				    dbo_zMASTER_DETAIL = Source{[Schema="dbo",Item="zMASTER_DETAIL"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(dbo_zMASTER_DETAIL, each ([RecordStatus] = "ACTIVE"))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

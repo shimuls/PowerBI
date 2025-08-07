@@ -1,0 +1,73 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "aa300bc4dd2ecb0cb054",
+  "position": {
+    "x": 168.0015138254843,
+    "y": 125.62007234979234,
+    "z": 4000,
+    "height": 74.04120443740095,
+    "width": 159.23930269413628,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "zCUSTOMER_GROUP"
+                    }
+                  },
+                  "Property": "CustomerGroupName"
+                }
+              },
+              "queryRef": "zCUSTOMER_GROUP.CustomerGroupName",
+              "nativeQueryRef": "Customer Group",
+              "active": true,
+              "displayName": "Customer Group"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "selfFilterEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "syncGroup": {
+      "groupName": "CustomerGroupName",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

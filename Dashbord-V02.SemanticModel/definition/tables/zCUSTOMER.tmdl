@@ -1,0 +1,237 @@
+table zCUSTOMER
+	lineageTag: ec3754d2-aff8-4442-970e-900187a766fb
+
+	column RecordStatus
+		dataType: string
+		lineageTag: 0c9e7ad1-ee06-45b3-80bf-f9775ab0c80b
+		summarizeBy: none
+		sourceColumn: RecordStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 41d6e7dd-851f-4fda-8b63-6bf1c4795afe
+		summarizeBy: none
+		sourceColumn: CreatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: 0636a53e-4c7d-4176-b730-a9a5d6a7d0f4
+			defaultHierarchy: LocalDateTable_0497ae33-2fe5-4e8f-867b-c48eec14a294.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 74b95baf-e77f-4a81-b681-ad18872bc0a2
+		summarizeBy: none
+		sourceColumn: UpdatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: 0313477b-a3c7-4ac8-83d2-cbe623244489
+			defaultHierarchy: LocalDateTable_aad603a2-6238-450c-83c2-73ac4c699b23.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerID
+		dataType: string
+		lineageTag: 56545331-8bdd-478b-b6c2-a40ea7a64fb9
+		summarizeBy: none
+		sourceColumn: CustomerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerName
+		dataType: string
+		lineageTag: b4f8d591-a05e-438e-9ba2-6f6141236e20
+		summarizeBy: none
+		sourceColumn: CustomerName
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerShortName
+		dataType: string
+		lineageTag: 7866a46f-b581-4216-a0d6-22cd7c9b06f4
+		summarizeBy: none
+		sourceColumn: CustomerShortName
+
+		annotation SummarizationSetBy = Automatic
+
+	column OnBoardingDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 22610016-00d8-47ec-a75b-fabb3cb926b2
+		summarizeBy: none
+		sourceColumn: OnBoardingDate
+
+		variation Variation
+			isDefault
+			relationship: 4201f54a-1c4d-4cf8-9c8e-bf26c7c4f39d
+			defaultHierarchy: LocalDateTable_83ad7e74-e562-49cb-9997-594b7b6b2eb0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreditLimit
+		dataType: double
+		lineageTag: e71cfb8f-e45c-43f6-b92b-9b0855aa84da
+		summarizeBy: sum
+		sourceColumn: CreditLimit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column BillingAddressID
+		dataType: string
+		lineageTag: e674d2b1-72c1-4d1b-a066-14a33bb61746
+		summarizeBy: none
+		sourceColumn: BillingAddressID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ConsigneeAddressID
+		dataType: string
+		lineageTag: 138f8d06-a901-45be-a970-c0b3f02ad9a7
+		summarizeBy: none
+		sourceColumn: ConsigneeAddressID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedByUserID
+		dataType: string
+		lineageTag: 36a38c4c-3e56-43ed-b4be-9190a31de428
+		summarizeBy: none
+		sourceColumn: CreatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerCurrencyID
+		dataType: string
+		lineageTag: dbaa0903-7a1b-4d00-aa29-458b04ad8c36
+		summarizeBy: none
+		sourceColumn: CustomerCurrencyID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerCountryID
+		dataType: string
+		lineageTag: 343d3da2-7f69-4dbb-b040-f6dc7a184d77
+		summarizeBy: none
+		sourceColumn: CustomerCountryID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerGroupID
+		dataType: string
+		lineageTag: e79d2c7c-0a8d-4e99-9a3d-daacabb11c62
+		summarizeBy: none
+		sourceColumn: CustomerGroupID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerStatusID
+		dataType: string
+		lineageTag: 3239a186-f9db-4cda-bf14-b9aa747b8904
+		summarizeBy: none
+		sourceColumn: CustomerStatusID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerTypeID
+		dataType: string
+		lineageTag: 9fb31431-3d76-4f44-b07b-56bd05482bbb
+		summarizeBy: none
+		sourceColumn: CustomerTypeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProspectID
+		dataType: string
+		lineageTag: b28d2d1a-6c93-4e05-9edf-442e86e5fff6
+		summarizeBy: none
+		sourceColumn: ProspectID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ShippingAddressID
+		dataType: string
+		lineageTag: 5f656745-1b38-44ea-8ae7-7fed99eb3c2d
+		summarizeBy: none
+		sourceColumn: ShippingAddressID
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedByUserID
+		dataType: string
+		lineageTag: 11059170-cdac-4c16-a0e3-10ce3671119a
+		summarizeBy: none
+		sourceColumn: UpdatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContactDesignation
+		dataType: string
+		lineageTag: d8b111a1-40e2-4b7d-9d29-efa6e9a50891
+		summarizeBy: none
+		sourceColumn: ContactDesignation
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContactEmail
+		dataType: string
+		lineageTag: 527fe55b-3b3e-4e66-a188-a70c8bc5b84f
+		summarizeBy: none
+		sourceColumn: ContactEmail
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContactName
+		dataType: string
+		lineageTag: b1f18d39-8f60-4a92-a331-ad9a27d9d8c4
+		summarizeBy: none
+		sourceColumn: ContactName
+
+		annotation SummarizationSetBy = Automatic
+
+	column FinancialCompanyID
+		dataType: string
+		lineageTag: af43c953-27cf-4434-a55e-8248d9f048aa
+		summarizeBy: none
+		sourceColumn: FinancialCompanyID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Remarks
+		dataType: string
+		lineageTag: 7879bf75-49fb-4c6f-81b8-1eb54950b2d3
+		summarizeBy: none
+		sourceColumn: Remarks
+
+		annotation SummarizationSetBy = Automatic
+
+	column DestinationPortID
+		dataType: string
+		lineageTag: e5645995-8c9e-42c1-9bde-ae08d64ec83f
+		summarizeBy: none
+		sourceColumn: DestinationPortID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition zCUSTOMER = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("52.220.68.78", "zinfotrek"),
+				    dbo_zCUSTOMER = Source{[Schema="dbo",Item="zCUSTOMER"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(dbo_zCUSTOMER, each ([RecordStatus] = "ACTIVE"))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

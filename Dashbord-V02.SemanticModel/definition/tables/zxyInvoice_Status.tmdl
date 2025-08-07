@@ -1,0 +1,110 @@
+table zxyInvoice_Status
+	lineageTag: ac25710e-d70d-487c-9f02-69a3e2e37ebc
+
+	column RecordStatus
+		dataType: string
+		lineageTag: 890da9b7-058a-40d8-9965-21dc77bde297
+		summarizeBy: none
+		sourceColumn: RecordStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8527b80f-f57f-4457-a665-552b8a315316
+		summarizeBy: none
+		sourceColumn: CreatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: 4d5359d0-db25-468c-9cf5-9ab16155b387
+			defaultHierarchy: LocalDateTable_822b5e70-9096-4579-b3e1-c71f645b7f94.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d17a8e7d-31cc-43ad-b247-d96673346897
+		summarizeBy: none
+		sourceColumn: UpdatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: b3bc7c95-6e38-43ad-a23d-1944114ab40a
+			defaultHierarchy: LocalDateTable_fcedbd56-ba85-4e03-8d12-d65a3c20df79.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column MasterDetailID
+		dataType: string
+		lineageTag: 27c79587-ddb3-4c5b-bbf0-b26007df2845
+		summarizeBy: none
+		sourceColumn: MasterDetailID
+
+		annotation SummarizationSetBy = Automatic
+
+	column MasterValue
+		dataType: string
+		lineageTag: da25b1ba-0ef5-4726-8570-35eb0c0eee46
+		summarizeBy: none
+		sourceColumn: MasterValue
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsDefault
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 9e5a1394-cf72-4112-89e5-54ee8e5cdfed
+		summarizeBy: none
+		sourceColumn: IsDefault
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedByUserID
+		dataType: string
+		lineageTag: dcf106eb-de1e-4523-9008-8f0b4ea1ab5e
+		summarizeBy: none
+		sourceColumn: CreatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column MasterID
+		dataType: string
+		lineageTag: ab14992e-6144-43fa-9561-5a2f9fcd732e
+		summarizeBy: none
+		sourceColumn: MasterID
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedByUserID
+		dataType: string
+		lineageTag: 7949bb95-a129-4425-9570-0598e73ba0d2
+		summarizeBy: none
+		sourceColumn: UpdatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SapCode
+		dataType: string
+		lineageTag: 474db4ff-2ddc-477d-9429-4e35673da2bf
+		summarizeBy: none
+		sourceColumn: SapCode
+
+		annotation SummarizationSetBy = Automatic
+
+	partition zxyInvoice_Status = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("52.220.68.78", "zinfotrek"),
+				    dbo_zMASTER_DETAIL = Source{[Schema="dbo",Item="zMASTER_DETAIL"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(dbo_zMASTER_DETAIL, each ([RecordStatus] = "ACTIVE") and ([MasterValue] = "Confirmed"))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

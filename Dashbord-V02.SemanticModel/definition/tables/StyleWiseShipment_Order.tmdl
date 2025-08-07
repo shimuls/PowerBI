@@ -1,0 +1,343 @@
+table StyleWiseShipment_Order
+	lineageTag: a5cd020e-cb76-4a9f-99c2-fc4f76e3e4ac
+
+	column FactoryInvoiceNumber
+		dataType: string
+		lineageTag: 6690704d-7de5-4e8e-855a-f92bb295ab97
+		summarizeBy: none
+		sourceColumn: FactoryInvoiceNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column StyleCode
+		dataType: string
+		lineageTag: 142be9b3-a805-4804-94e4-497ef748de57
+		summarizeBy: none
+		sourceColumn: StyleCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column PINumber
+		dataType: string
+		lineageTag: dec3c097-d16c-478b-9ba7-28bcaf21be46
+		summarizeBy: none
+		sourceColumn: PINumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerStyleNumber
+		dataType: string
+		lineageTag: 1d3f1b1a-2876-4f8b-9456-16aefd5d99ad
+		summarizeBy: none
+		sourceColumn: CustomerStyleNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column StyleName
+		dataType: string
+		lineageTag: 0d82c6ab-6a06-49df-9c52-349a183b7b54
+		summarizeBy: none
+		sourceColumn: StyleName
+
+		annotation SummarizationSetBy = Automatic
+
+	column CPOSKUCustomerPrice
+		dataType: double
+		lineageTag: 783eeb2c-3b44-427c-8638-51bfe5e671f9
+		summarizeBy: sum
+		sourceColumn: CPOSKUCustomerPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FPOSKUVendorPrice
+		dataType: double
+		lineageTag: 5029b0c0-22d5-4ece-9a41-d525f35b0543
+		summarizeBy: sum
+		sourceColumn: FPOSKUVendorPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SKUShipQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 8128747b-2abd-4390-a9c0-f91bd704676b
+		summarizeBy: sum
+		sourceColumn: SKUShipQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalCPOQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 17823ff0-8c2d-4129-bbd1-7d8cbaf71f0b
+		summarizeBy: sum
+		sourceColumn: TotalCPOQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalFPOQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 9a8c95c6-28f6-4ad3-afde-4a032e6034f0
+		summarizeBy: sum
+		sourceColumn: TotalFPOQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column Size
+		dataType: string
+		lineageTag: e5f7f458-e76d-4556-a913-2b3439c3c368
+		summarizeBy: none
+		sourceColumn: Size
+
+		annotation SummarizationSetBy = Automatic
+
+	column ColourName
+		dataType: string
+		lineageTag: 548df4e3-bedf-4482-bf8d-32bd65af5fa4
+		summarizeBy: none
+		sourceColumn: ColourName
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerOrderNumber
+		dataType: string
+		lineageTag: f7151363-78ef-4519-b5a6-7e8e71ae1ef0
+		summarizeBy: none
+		sourceColumn: CustomerOrderNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column CPONumber
+		dataType: string
+		lineageTag: 2293453d-2469-4728-bd84-ba2b72b82c59
+		summarizeBy: none
+		sourceColumn: CPONumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column HSCode
+		dataType: string
+		lineageTag: 5e43efea-ea71-49f1-b8b1-b07a40ecd42d
+		summarizeBy: none
+		sourceColumn: HSCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Expr1
+		dataType: double
+		lineageTag: f643c181-25c5-40b2-84d4-13b17a92f6a2
+		summarizeBy: sum
+		sourceColumn: Expr1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FactoryInvoiceID
+		dataType: string
+		lineageTag: 7456b0bc-46b5-4f84-98c8-fe8fb8849c85
+		summarizeBy: none
+		sourceColumn: FactoryInvoiceID
+
+		annotation SummarizationSetBy = Automatic
+
+	column RecordStatus
+		dataType: string
+		lineageTag: 717bc18c-c15a-451b-a145-1f356b971cbd
+		summarizeBy: none
+		sourceColumn: RecordStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column BrandValue
+		dataType: string
+		lineageTag: 5d853e05-0828-4f4f-9ecb-03ec9fee4cd0
+		summarizeBy: none
+		sourceColumn: BrandValue
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 0b634ffb-b973-4029-b6f5-9ce92503dad8
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerName
+		dataType: string
+		lineageTag: b5fffbf0-7f1d-4e38-bfa6-68b93f9dcab8
+		summarizeBy: none
+		sourceColumn: CustomerName
+
+		annotation SummarizationSetBy = Automatic
+
+	column FactoryName
+		dataType: string
+		lineageTag: ddfce8ee-31e5-4a6b-9860-2b54d54f18b1
+		summarizeBy: none
+		sourceColumn: FactoryName
+
+		annotation SummarizationSetBy = Automatic
+
+	column DivisionName
+		dataType: string
+		lineageTag: eab81c5b-272f-4d70-ae56-cddab7fa85cc
+		summarizeBy: none
+		sourceColumn: DivisionName
+
+		annotation SummarizationSetBy = Automatic
+
+	column FactoryInvoiceReference
+		dataType: string
+		lineageTag: 890a0d96-1640-4939-a47a-f4b9a6342556
+		summarizeBy: none
+		sourceColumn: FactoryInvoiceReference
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryOfficeName
+		dataType: string
+		lineageTag: 26e4ff43-bee3-4ba0-a2f9-9432d5dcc741
+		summarizeBy: none
+		sourceColumn: CountryOfficeName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Remarks
+		dataType: string
+		lineageTag: 7b912626-e39a-4362-86c5-7a39ca1a170d
+		summarizeBy: none
+		sourceColumn: Remarks
+
+		annotation SummarizationSetBy = Automatic
+
+	column ETA
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6e69b236-7679-4142-8fac-cac29ffa741a
+		summarizeBy: none
+		sourceColumn: ETA
+
+		variation Variation
+			isDefault
+			relationship: 85517cd2-b26a-4977-944e-606984bfe40d
+			defaultHierarchy: LocalDateTable_f10d9d5d-3048-4fe0-9f8b-af1a4540b3fb.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ETD
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 16dd4d41-fd01-4d13-a733-affa59490f0d
+		summarizeBy: none
+		sourceColumn: ETD
+
+		annotation SummarizationSetBy = Automatic
+
+	column ZXYInvoiceNumber
+		dataType: string
+		lineageTag: fa782f5c-97c8-4ebb-ba5b-74d1a0c9db2d
+		summarizeBy: none
+		sourceColumn: ZXYInvoiceNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column HBL-HAWB
+		dataType: string
+		lineageTag: 8ca04507-b50a-413f-b352-01d5e1166bfa
+		summarizeBy: none
+		sourceColumn: HBL-HAWB
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerGroupName
+		dataType: string
+		lineageTag: 7d00c688-1dcc-4391-a4a6-8b139be4ea2c
+		summarizeBy: none
+		sourceColumn: CustomerGroupName
+
+		annotation SummarizationSetBy = Automatic
+
+	column CPOSKUQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: e587ce2b-bc54-429f-97ea-096d7d5fdff2
+		summarizeBy: sum
+		sourceColumn: CPOSKUQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column GenderID
+		dataType: string
+		lineageTag: cf08df1e-81a1-41f8-96d2-3b1cf12504d7
+		summarizeBy: none
+		sourceColumn: GenderID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gender
+		dataType: string
+		lineageTag: f4c3eb54-fab0-48b8-bc7f-a17674723b02
+		summarizeBy: none
+		sourceColumn: Gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductTypeName
+		dataType: string
+		lineageTag: ed366724-ea8b-4922-b653-4a1ae97635dd
+		summarizeBy: none
+		sourceColumn: ProductTypeName
+
+		annotation SummarizationSetBy = Automatic
+
+	column FPOSKUQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 62d6e39c-9d77-4a8c-9ef0-ae5c0447546a
+		summarizeBy: sum
+		sourceColumn: FPOSKUQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column CPOSKUValue
+		dataType: double
+		lineageTag: f7bddfdb-f8a2-40aa-b725-864f0122cdaa
+		summarizeBy: sum
+		sourceColumn: CPOSKUValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FPOSKUValue
+		dataType: double
+		lineageTag: 09c992af-2920-4167-ba37-e10809a18a91
+		summarizeBy: sum
+		sourceColumn: FPOSKUValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition StyleWiseShipment_Order = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("52.220.68.78"),
+				    zinfotrek = Source{[Name="zinfotrek"]}[Data],
+				    dbo_StyleWiseShipment = zinfotrek{[Schema="dbo",Item="StyleWiseShipment"]}[Data]
+				in
+				    dbo_StyleWiseShipment
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

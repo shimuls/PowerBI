@@ -1,0 +1,121 @@
+table zSHIPMENT_SKU
+	lineageTag: 1a97c0cf-988a-4e70-9ac7-aaea10314dd9
+
+	column RecordStatus
+		dataType: string
+		lineageTag: b33658ae-5b92-45d0-9739-671c92477d03
+		summarizeBy: none
+		sourceColumn: RecordStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 837433a2-36e6-4958-aca3-4b8b547ca07b
+		summarizeBy: none
+		sourceColumn: CreatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: 32e667da-9998-4610-9f90-cdae8aa30ec2
+			defaultHierarchy: LocalDateTable_15d4f9fa-50c5-40ca-afe0-6fe68fb3fd38.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1ca6ba3e-2e01-4253-820b-68610f1617bf
+		summarizeBy: none
+		sourceColumn: UpdatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: d062961f-29d8-4032-ae91-b651f2bf04d1
+			defaultHierarchy: LocalDateTable_25a65527-bd6f-457b-90e9-3ad220f30a09.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ShipmentSKUID
+		dataType: string
+		lineageTag: 83201fca-0bcd-4561-a398-44ea07bdb96a
+		summarizeBy: none
+		sourceColumn: ShipmentSKUID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SKUShipQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 751a8534-c1d1-47b2-822e-eb535f75c5d6
+		summarizeBy: sum
+		sourceColumn: SKUShipQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedByUserID
+		dataType: string
+		lineageTag: 085d85c6-8cee-494f-9a7a-87f49922b60a
+		summarizeBy: none
+		sourceColumn: CreatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ShipmentStyleID
+		dataType: string
+		lineageTag: 0e334b16-5431-4fcd-a89f-d0963f50ec74
+		summarizeBy: none
+		sourceColumn: ShipmentStyleID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SKUID
+		dataType: string
+		lineageTag: 4a3c3e01-63b3-4f65-b179-c3c491e4f008
+		summarizeBy: none
+		sourceColumn: SKUID
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedByUserID
+		dataType: string
+		lineageTag: 687ef274-80b3-49fb-960e-3db865922d2e
+		summarizeBy: none
+		sourceColumn: UpdatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalCPOQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 1ce00d77-f381-4bd3-8f3f-498b6508e312
+		summarizeBy: sum
+		sourceColumn: TotalCPOQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalFPOQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: cdde6257-5bd5-476f-ae54-0a5c89601031
+		summarizeBy: sum
+		sourceColumn: TotalFPOQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+	partition zSHIPMENT_SKU = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("52.220.68.78"),
+				    zinfotrek = Source{[Name="zinfotrek"]}[Data],
+				    dbo_zSHIPMENT_SKU = zinfotrek{[Schema="dbo",Item="zSHIPMENT_SKU"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(dbo_zSHIPMENT_SKU, each true)
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

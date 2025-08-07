@@ -1,0 +1,144 @@
+table zCPO_SKU
+	lineageTag: 91e7dd0e-7298-4110-b026-a1f57b3fddfd
+
+	column RecordStatus
+		dataType: string
+		lineageTag: e427e218-528c-477f-91a6-bf8e237ff514
+		summarizeBy: none
+		sourceColumn: RecordStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: be6b6d40-fac7-4602-add3-696e03aed26f
+		summarizeBy: none
+		sourceColumn: CreatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: 7b4be68c-0401-4c61-bdbd-eb283e530a68
+			defaultHierarchy: LocalDateTable_a9cc05d8-0282-406b-908f-36968e2b6a2b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b1f3137e-3699-4ea9-942d-bf0df1d8b326
+		summarizeBy: none
+		sourceColumn: UpdatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: f47f7dad-f2cc-42cb-8328-b30dc8a67fcc
+			defaultHierarchy: LocalDateTable_7e206b87-e2df-49f2-b594-8386bf2b7aa6.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column CPOSKUID
+		dataType: string
+		lineageTag: d5024d79-95fc-4422-9368-41268973ef19
+		summarizeBy: none
+		sourceColumn: CPOSKUID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CPOSKUCustomerPrice
+		dataType: double
+		lineageTag: c2a0777a-a680-4276-a206-cbdbdfe4909c
+		summarizeBy: sum
+		sourceColumn: CPOSKUCustomerPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CPOSKUQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: bd49759e-efc9-49d2-b440-56290a08c78f
+		summarizeBy: sum
+		sourceColumn: CPOSKUQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column ColourID
+		dataType: string
+		lineageTag: bf3eb062-5420-4884-9be3-a236d4fc932f
+		summarizeBy: none
+		sourceColumn: ColourID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CPOStyleID
+		dataType: string
+		lineageTag: 67fbe11d-48d7-47fe-8fb1-debf7db6a563
+		summarizeBy: none
+		sourceColumn: CPOStyleID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedByUserID
+		dataType: string
+		lineageTag: 19c3d2e7-e77f-4504-81f1-79aa2fe53dfb
+		summarizeBy: none
+		sourceColumn: CreatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SizeID
+		dataType: string
+		lineageTag: 6b5fb4fc-1ee8-4726-b274-118c4b935859
+		summarizeBy: none
+		sourceColumn: SizeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedByUserID
+		dataType: string
+		lineageTag: 27837d4b-c365-4ea0-a72f-d829031235eb
+		summarizeBy: none
+		sourceColumn: UpdatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FPOSKUQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: f4cb63ed-a85d-4746-b2c7-71184e72585a
+		summarizeBy: sum
+		sourceColumn: FPOSKUQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column FPOSKUVendorPrice
+		dataType: double
+		lineageTag: 8c5efb6a-5f99-4ce2-a26b-96e07de4ae30
+		summarizeBy: sum
+		sourceColumn: FPOSKUVendorPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column IsShipped
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 52b70bcf-e1b7-4f93-acf6-2a6996f59c6e
+		summarizeBy: none
+		sourceColumn: IsShipped
+
+		annotation SummarizationSetBy = Automatic
+
+	partition zCPO_SKU = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("52.220.68.78"),
+				    zinfotrek = Source{[Name="zinfotrek"]}[Data],
+				    dbo_zCPO_SKU = zinfotrek{[Schema="dbo",Item="zCPO_SKU"]}[Data]
+				in
+				    dbo_zCPO_SKU
+

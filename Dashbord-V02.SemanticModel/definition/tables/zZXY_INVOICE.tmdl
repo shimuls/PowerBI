@@ -1,0 +1,199 @@
+table zZXY_INVOICE
+	lineageTag: 6cfec3bc-70e3-40f0-bf6a-116989ca07da
+
+	column RecordStatus
+		dataType: string
+		lineageTag: a3b798cc-023a-4f08-8d17-bf25fbe8eb15
+		summarizeBy: none
+		sourceColumn: RecordStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 23f2bf9b-b3b1-4ac1-9144-4a704eab5e13
+		summarizeBy: none
+		sourceColumn: CreatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: cf2e28f4-002a-4c4d-ba1e-b1b4c4e89d0b
+			defaultHierarchy: LocalDateTable_4da93472-a6b7-4c61-a1c3-f03bd66a1ee6.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a1feba85-8a5d-4193-9420-b619101d1c80
+		summarizeBy: none
+		sourceColumn: UpdatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: 83411955-5e41-4bd3-98c2-44868f429c51
+			defaultHierarchy: LocalDateTable_36d6b469-0e73-4513-9e45-ed5f9713034e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ZXYInvoiceID
+		dataType: string
+		lineageTag: 643c377a-f71b-4807-a532-ff2fbda63e3f
+		summarizeBy: none
+		sourceColumn: ZXYInvoiceID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ZXYInvoiceNumber
+		dataType: string
+		lineageTag: 243e1f88-d5da-41af-9d0d-8cad6b813670
+		summarizeBy: none
+		sourceColumn: ZXYInvoiceNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalCustomerValue
+		dataType: double
+		lineageTag: b4db49bd-14db-4458-97b2-191fef47bb66
+		summarizeBy: sum
+		sourceColumn: TotalCustomerValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CreatedByUserID
+		dataType: string
+		lineageTag: 743e9002-d022-4d16-968c-4272cbb4da4c
+		summarizeBy: none
+		sourceColumn: CreatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FactoryInvoiceID
+		dataType: string
+		lineageTag: 496cc9cb-4a56-42a3-a99b-2ce2ca31d6b5
+		summarizeBy: none
+		sourceColumn: FactoryInvoiceID
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedByUserID
+		dataType: string
+		lineageTag: f51ec37a-de7f-424b-8c22-ca59550e6eba
+		summarizeBy: none
+		sourceColumn: UpdatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ZXYInvoiceStatusID
+		dataType: string
+		lineageTag: 2c6bd456-4a11-4b45-bf0b-9caf644c379e
+		summarizeBy: none
+		sourceColumn: ZXYInvoiceStatusID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrencyID
+		dataType: string
+		lineageTag: 54a18ca7-94a4-4298-91a1-bff1395cfa27
+		summarizeBy: none
+		sourceColumn: CurrencyID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerPaymentMethodID
+		dataType: string
+		lineageTag: 7780ff4d-2faa-4188-94f4-8a6a741fc867
+		summarizeBy: none
+		sourceColumn: CustomerPaymentMethodID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DocsReceivedByCustomerDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a7c2d106-1f0e-4b65-bf92-8048da54e788
+		summarizeBy: none
+		sourceColumn: DocsReceivedByCustomerDate
+
+		variation Variation
+			isDefault
+			relationship: abb3604d-2972-472d-9b76-1c597b260362
+			defaultHierarchy: LocalDateTable_2fbe04ad-ccab-434c-914b-c9c723e0054c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column DocsSurrenderDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ea887fcf-bdc3-4b81-af64-1dfcc6210cb9
+		summarizeBy: none
+		sourceColumn: DocsSurrenderDate
+
+		variation Variation
+			isDefault
+			relationship: 41e7114a-563a-45bc-b0f3-3eb4bbefa3d3
+			defaultHierarchy: LocalDateTable_90fbe0c8-1813-44ac-8625-8c6462b1a763.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ZXYIDocsReceivedByCustomerDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 50bad770-73ed-4e77-93c1-4803f72f040e
+		summarizeBy: none
+		sourceColumn: ZXYIDocsReceivedByCustomerDate
+
+		variation Variation
+			isDefault
+			relationship: d7522d57-acd1-4686-a0bf-b2e52b30efc0
+			defaultHierarchy: LocalDateTable_3d8d781e-a859-442c-b25b-0650f32158fa.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ZXYInvoiceDocsStatusID
+		dataType: string
+		lineageTag: a6bb43ad-cdc3-4dd9-86ed-6989e1018b40
+		summarizeBy: none
+		sourceColumn: ZXYInvoiceDocsStatusID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SubmissionTypeID
+		dataType: string
+		lineageTag: baeb17ae-99e5-41c4-8f8e-ad555c318027
+		summarizeBy: none
+		sourceColumn: SubmissionTypeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberOfZxyiDocuemntRules
+		dataType: int64
+		formatString: 0
+		lineageTag: 8c1f1f75-23b4-4f9c-8718-26433bab4e65
+		summarizeBy: sum
+		sourceColumn: NumberOfZxyiDocuemntRules
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalShippedQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: d7f2846b-b248-4942-8f6b-332f04969791
+		summarizeBy: sum
+		sourceColumn: TotalShippedQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+	partition zZXY_INVOICE = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("52.220.68.78"),
+				    zinfotrek = Source{[Name="zinfotrek"]}[Data],
+				    dbo_zZXY_INVOICE = zinfotrek{[Schema="dbo",Item="zZXY_INVOICE"]}[Data]
+				in
+				    dbo_zZXY_INVOICE
+

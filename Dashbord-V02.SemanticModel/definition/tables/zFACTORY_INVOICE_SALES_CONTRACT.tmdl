@@ -1,0 +1,101 @@
+table zFACTORY_INVOICE_SALES_CONTRACT
+	lineageTag: 5f85bf84-a824-4a59-83fa-705c6658070e
+
+	column RecordStatus
+		dataType: string
+		lineageTag: dd113f33-3ecd-4a67-9563-287b375700c8
+		summarizeBy: none
+		sourceColumn: RecordStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b6d6ac9f-d9d8-4cc6-804d-5f4e776b80a7
+		summarizeBy: none
+		sourceColumn: CreatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: 1b4ea61f-9402-444e-9d37-2524617adf2d
+			defaultHierarchy: LocalDateTable_28e98825-9e5c-47d3-b3dd-651422da0e58.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b7a053f1-4013-4a5d-a1c8-177690072d03
+		summarizeBy: none
+		sourceColumn: UpdatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: 8b25695d-6699-4019-bc56-8487b9b11ac1
+			defaultHierarchy: LocalDateTable_5d325701-b648-4550-ac5e-cf34db14c7bf.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column FactoryInvoiceSalesContractID
+		dataType: string
+		lineageTag: 769336a5-e4df-4590-8ea8-0904233f32fe
+		summarizeBy: none
+		sourceColumn: FactoryInvoiceSalesContractID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedByUserID
+		dataType: string
+		lineageTag: 95317a7b-256a-4535-a8a0-5fe8dd5be9ac
+		summarizeBy: none
+		sourceColumn: CreatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FactoryInvoiceID
+		dataType: string
+		lineageTag: 07bbd97a-3aea-418e-8544-4444c1c4bf17
+		summarizeBy: none
+		sourceColumn: FactoryInvoiceID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PIID
+		dataType: string
+		lineageTag: 7383833c-caf6-4db3-9dee-9ad822532902
+		summarizeBy: none
+		sourceColumn: PIID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesContractID
+		dataType: string
+		lineageTag: 5f5fe26d-61e9-4f36-8e4e-2c019050f067
+		summarizeBy: none
+		sourceColumn: SalesContractID
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedByUserID
+		dataType: string
+		lineageTag: 09fc44f3-bd7d-4260-9df7-2e938f786caa
+		summarizeBy: none
+		sourceColumn: UpdatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition zFACTORY_INVOICE_SALES_CONTRACT = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("52.220.68.78"),
+				    zinfotrek = Source{[Name="zinfotrek"]}[Data],
+				    dbo_zFACTORY_INVOICE_SALES_CONTRACT = zinfotrek{[Schema="dbo",Item="zFACTORY_INVOICE_SALES_CONTRACT"]}[Data]
+				in
+				    dbo_zFACTORY_INVOICE_SALES_CONTRACT
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

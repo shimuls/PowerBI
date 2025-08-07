@@ -1,0 +1,100 @@
+table zCOUNTRY_OFFICE
+	lineageTag: 7e6bf344-6dbe-4afc-b015-3caef7973c14
+
+	column RecordStatus
+		dataType: string
+		lineageTag: 9d487d47-d166-4680-96f3-744402bb8da1
+		summarizeBy: none
+		sourceColumn: RecordStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 70ee9f29-112a-4db1-9df4-ba88aeaef2ad
+		summarizeBy: none
+		sourceColumn: CreatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: 560dbbb7-fee3-48e8-8db2-9ef03e12e479
+			defaultHierarchy: LocalDateTable_bc44761f-c1a6-4f74-976f-dafb8bdf02a7.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2e412f03-ba2a-40cc-857e-5c3a159e3df8
+		summarizeBy: none
+		sourceColumn: UpdatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: c40aec3d-d4a9-4940-9661-21977a89c946
+			defaultHierarchy: LocalDateTable_1850602d-ec61-4ce2-95bd-cbdc46792701.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryOfficeID
+		dataType: string
+		lineageTag: d318f1ec-abe4-4d0f-8d92-47231b3d2b9a
+		summarizeBy: none
+		sourceColumn: CountryOfficeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryOfficeName
+		dataType: string
+		lineageTag: c275190d-14cd-4f9b-aa9d-ac65ba07b4fd
+		summarizeBy: none
+		sourceColumn: CountryOfficeName
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryID
+		dataType: string
+		lineageTag: ee8ae505-0920-409e-b0e3-002d6596f0f0
+		summarizeBy: none
+		sourceColumn: CountryID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedByUserID
+		dataType: string
+		lineageTag: 6886d2ea-951c-45de-8909-a7b605da8b7c
+		summarizeBy: none
+		sourceColumn: CreatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedByUserID
+		dataType: string
+		lineageTag: 9eb1afb3-559e-4ccd-bf44-bfcea5d5a62a
+		summarizeBy: none
+		sourceColumn: UpdatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrencyID
+		dataType: string
+		lineageTag: df861be8-c2f6-412d-a241-cb428457d637
+		summarizeBy: none
+		sourceColumn: CurrencyID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition zCOUNTRY_OFFICE = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("52.220.68.78", "zinfotrek"),
+				    dbo_zCOUNTRY_OFFICE = Source{[Schema="dbo",Item="zCOUNTRY_OFFICE"]}[Data]
+				in
+				    dbo_zCOUNTRY_OFFICE
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

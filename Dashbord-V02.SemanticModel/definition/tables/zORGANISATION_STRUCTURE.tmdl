@@ -1,0 +1,48 @@
+table zORGANISATION_STRUCTURE
+	lineageTag: d08161c6-7bc7-4b1a-a672-19a526c4d1f1
+
+	column OrganisationStructureID
+		dataType: string
+		lineageTag: 599154ae-1cfe-433d-b33e-8bf82beae720
+		summarizeBy: none
+		sourceColumn: OrganisationStructureID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryOfficeID
+		dataType: string
+		lineageTag: d0689024-bba7-47e3-93b7-df7989187c3b
+		summarizeBy: none
+		sourceColumn: CountryOfficeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DepartmentID
+		dataType: string
+		lineageTag: 278c2066-d4e6-4d94-9a57-c22165b80018
+		summarizeBy: none
+		sourceColumn: DepartmentID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DivisionID
+		dataType: string
+		lineageTag: f8667f56-b7cf-4be5-9372-336cfca87130
+		summarizeBy: none
+		sourceColumn: DivisionID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition zORGANISATION_STRUCTURE = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("52.220.68.78", "zinfotrek"),
+				    dbo_zORGANISATION_STRUCTURE = Source{[Schema="dbo",Item="zORGANISATION_STRUCTURE"]}[Data]
+				in
+				    dbo_zORGANISATION_STRUCTURE
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,211 @@
+table zCPO_STYLE_DELIVERY
+	lineageTag: 811a79c5-4379-4fcd-a2b5-aea5fdf4c5ab
+
+	measure 'Sum of CPOStyleValue divided by Sum of CPOStyleQuantity' =
+			
+			DIVIDE(
+				SUM('zCPO_STYLE_DELIVERY'[CPOStyleValue]),
+				SUM('zCPO_STYLE_DELIVERY'[CPOStyleQuantity])
+			)
+		lineageTag: e45e5fc1-8a94-46bd-89c3-0ba1c24a0cd8
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "MathematicalDivision"
+				}
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RecordStatus
+		dataType: string
+		lineageTag: 288daba8-fc6c-494a-8068-15e5077fb5f8
+		summarizeBy: none
+		sourceColumn: RecordStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1f9359d9-60a1-4127-b95d-95109682fe9a
+		summarizeBy: none
+		sourceColumn: CreatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: 10fdd00e-dae0-4444-88f1-bf30eba55b16
+			defaultHierarchy: LocalDateTable_89991432-d9ea-48c5-9dba-cbb922479636.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5c371f6d-965d-4d2a-a91d-816d58ad669d
+		summarizeBy: none
+		sourceColumn: UpdatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: a833de77-5cea-4285-ac9f-ef6a191684a1
+			defaultHierarchy: LocalDateTable_f363520f-6d7b-41c8-b32a-29b61ad2137f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column CPOStyleDeliveryID
+		dataType: string
+		lineageTag: 88238ad0-4d0d-4791-b3b4-f9b0c5cbd85a
+		summarizeBy: none
+		sourceColumn: CPOStyleDeliveryID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerDeliveryDate
+		dataType: dateTime
+		formatString: dd-mmm-yy
+		lineageTag: b107dbf9-874c-4519-b707-ab44028f4c25
+		summarizeBy: none
+		sourceColumn: CustomerDeliveryDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column CPOStyleQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 432cb514-e0d4-4e70-a369-369b27896f62
+		summarizeBy: sum
+		sourceColumn: CPOStyleQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column CPOStyleValue
+		dataType: double
+		lineageTag: 2088f15f-8abf-4146-9cae-f2f7be68f776
+		summarizeBy: sum
+		sourceColumn: CPOStyleValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FactoryDeliveryDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 1df63744-16f6-4553-a33a-0f4580616101
+		summarizeBy: none
+		sourceColumn: FactoryDeliveryDate
+
+		variation Variation
+			isDefault
+			relationship: 67932dee-e3b0-4112-8127-6dbcb49ac602
+			defaultHierarchy: LocalDateTable_e5c07f4d-9d2d-4bf4-8aaa-62b3580b9166.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FPOStyleQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 1c681fa1-e9c2-4676-9efd-b0f4b7fff33d
+		summarizeBy: sum
+		sourceColumn: FPOStyleQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column FPOStyleValue
+		dataType: double
+		lineageTag: 2e67350c-bdaa-426d-8524-aef4a826255c
+		summarizeBy: sum
+		sourceColumn: FPOStyleValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CPOStyleID
+		dataType: string
+		lineageTag: 356c71d7-3668-434e-b00f-e5528a2e6a0c
+		summarizeBy: none
+		sourceColumn: CPOStyleID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedByUserID
+		dataType: string
+		lineageTag: 3dd73406-628d-479f-84ba-f31408df0355
+		summarizeBy: none
+		sourceColumn: CreatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedByUserID
+		dataType: string
+		lineageTag: bb1c5287-70c2-4177-a24c-147d0890b77c
+		summarizeBy: none
+		sourceColumn: UpdatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerRate = (zCPO_STYLE_DELIVERY[CPOStyleValue] / zCPO_STYLE_DELIVERY[CPOStyleQuantity])
+		lineageTag: 463750f1-d8fd-41ab-b179-c0bfe9303e5b
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column VendorRate = IF(ISBLANK(zCPO_STYLE_DELIVERY[FPOStyleValue] / zCPO_STYLE_DELIVERY[FPOStyleQuantity]) , 0 ,  DIVIDE(zCPO_STYLE_DELIVERY[FPOStyleValue] , zCPO_STYLE_DELIVERY[FPOStyleQuantity] , 0))
+		lineageTag: 8f90940a-c405-462e-862a-8360166cb268
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MARGIN = IF(zCPO_STYLE_DELIVERY[VendorRate] = 0, 0,  zCPO_STYLE_DELIVERY[CustomerRate] - zCPO_STYLE_DELIVERY[VendorRate])
+		lineageTag: 83204cd9-cff9-4bdf-a616-b51926c04c8f
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OrderMargin = zCPO_STYLE_DELIVERY[CPOStyleQuantity] * zCPO_STYLE_DELIVERY[MARGIN]
+		lineageTag: 161e4c7e-9ed9-4029-9e98-19c544c91ec4
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FPOMargin = zCPO_STYLE_DELIVERY[FPOStyleQuantity] * zCPO_STYLE_DELIVERY[MARGIN]
+		lineageTag: ea834332-a2ab-475e-a806-2b84e7c9315b
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition zCPO_STYLE_DELIVERY = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("52.220.68.78", "zinfotrek"),
+				    dbo_zCPO_STYLE_DELIVERY = Source{[Schema="dbo",Item="zCPO_STYLE_DELIVERY"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(dbo_zCPO_STYLE_DELIVERY, each ([RecordStatus] = "ACTIVE")),
+				    #"Filtered Rows1" = Table.SelectRows(#"Filtered Rows", each [CPOStyleQuantity] > 0)
+				in
+				    #"Filtered Rows1"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

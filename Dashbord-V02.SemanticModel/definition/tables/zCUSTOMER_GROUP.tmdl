@@ -1,0 +1,101 @@
+table zCUSTOMER_GROUP
+	lineageTag: 0069ff4b-10d7-42bc-bc29-cde24dd3d29e
+
+	column RecordStatus
+		dataType: string
+		lineageTag: 463e4ce2-62ab-4243-8403-84a58c1ad9e9
+		summarizeBy: none
+		sourceColumn: RecordStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5007c6bb-d26e-4b10-8052-0089b5ee6289
+		summarizeBy: none
+		sourceColumn: CreatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: bd66e75d-6b85-40c9-91aa-8988e233795c
+			defaultHierarchy: LocalDateTable_7b3be01b-706b-4766-8533-89583fe36472.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 051ad229-fe25-416f-b091-70bc43ed0c3d
+		summarizeBy: none
+		sourceColumn: UpdatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: 633c7e28-8d63-465f-87df-182d71ac430a
+			defaultHierarchy: LocalDateTable_9fd2fc3e-eee8-4c7d-8094-e37188d51288.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerGroupID
+		dataType: string
+		lineageTag: 2d01abd7-b633-493f-a6f3-2a9926518308
+		summarizeBy: none
+		sourceColumn: CustomerGroupID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerGroupName
+		dataType: string
+		lineageTag: be571655-822e-468d-ad3f-ac2c0030bf08
+		summarizeBy: none
+		sourceColumn: CustomerGroupName
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedByUserID
+		dataType: string
+		lineageTag: 7fccc819-74fc-47aa-bf9e-0adb5dcbe867
+		summarizeBy: none
+		sourceColumn: CreatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedByUserID
+		dataType: string
+		lineageTag: de588f6e-d64b-4264-8401-493d86539ce2
+		summarizeBy: none
+		sourceColumn: UpdatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerFactoryApprovalProtocolID
+		dataType: string
+		lineageTag: 77a030cc-3379-4334-9b8f-a0967cc075ef
+		summarizeBy: none
+		sourceColumn: CustomerFactoryApprovalProtocolID
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsSalesBudgetPerCustomerGroup
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 281cc082-0c8e-4412-9862-24362a37c777
+		summarizeBy: none
+		sourceColumn: IsSalesBudgetPerCustomerGroup
+
+		annotation SummarizationSetBy = Automatic
+
+	partition zCUSTOMER_GROUP = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("52.220.68.78", "zinfotrek"),
+				    dbo_zCUSTOMER_GROUP = Source{[Schema="dbo",Item="zCUSTOMER_GROUP"]}[Data]
+				in
+				    dbo_zCUSTOMER_GROUP
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

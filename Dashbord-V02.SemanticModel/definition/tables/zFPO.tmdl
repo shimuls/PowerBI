@@ -1,0 +1,226 @@
+table zFPO
+	lineageTag: af63bde6-cf76-437c-a109-69ee7d01e248
+
+	column RecordStatus
+		dataType: string
+		lineageTag: 6f787d48-8a62-492e-9dd4-7fdf30323f45
+		summarizeBy: none
+		sourceColumn: RecordStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 0a2c5ca6-14db-44d9-8f86-306ce370f930
+		summarizeBy: none
+		sourceColumn: CreatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: 492649ed-de34-4390-aeb3-67e30252ac87
+			defaultHierarchy: LocalDateTable_aa47dde5-cb4f-4bf4-b8c9-e5aaf7d191d6.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 0ff04668-ab69-4434-8604-92a811bf1798
+		summarizeBy: none
+		sourceColumn: UpdatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: b8b008eb-ecf6-4628-ba96-bb005209c02a
+			defaultHierarchy: LocalDateTable_2863becf-bdca-48e6-83de-82d65b87954f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column FPOID
+		dataType: string
+		lineageTag: d3068a42-72f9-4616-949f-7d50e250da66
+		summarizeBy: none
+		sourceColumn: FPOID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FPONumber
+		dataType: string
+		lineageTag: 83544341-1750-48a0-9e58-1d55e62ba7d3
+		summarizeBy: none
+		sourceColumn: FPONumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column FPOvalue
+		dataType: double
+		lineageTag: e0704f07-7bd4-4161-8739-b49c96eb808c
+		summarizeBy: sum
+		sourceColumn: FPOvalue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FPOQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 3ac63785-0b09-47e0-b54a-72e4b621d227
+		summarizeBy: sum
+		sourceColumn: FPOQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column TermsAndConditions
+		dataType: string
+		lineageTag: cae68aeb-99f3-4be5-8a09-c53909057062
+		summarizeBy: none
+		sourceColumn: TermsAndConditions
+
+		annotation SummarizationSetBy = Automatic
+
+	column FPORevisionNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 938e5ef4-e528-4c3c-89d9-1a595fc29aca
+		summarizeBy: sum
+		sourceColumn: FPORevisionNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column FPORevisionReason
+		dataType: string
+		lineageTag: 5452bfb1-6261-46ae-a313-db9eb4a5e311
+		summarizeBy: none
+		sourceColumn: FPORevisionReason
+
+		annotation SummarizationSetBy = Automatic
+
+	column FPOStatusID
+		dataType: string
+		lineageTag: ceb49ea0-142f-445a-af01-bdc29b335de8
+		summarizeBy: none
+		sourceColumn: FPOStatusID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedByUserID
+		dataType: string
+		lineageTag: 76b7aa61-b4b9-4da2-a727-82aa16403377
+		summarizeBy: none
+		sourceColumn: CreatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrencyID
+		dataType: string
+		lineageTag: cb9b51ef-e88b-4431-9008-b42f0a94a586
+		summarizeBy: none
+		sourceColumn: CurrencyID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FactoryID
+		dataType: string
+		lineageTag: ee321f26-07b6-441f-b3c4-bb3b20b5c6ef
+		summarizeBy: none
+		sourceColumn: FactoryID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PaymentTermsID
+		dataType: string
+		lineageTag: 5a5f4d32-2c19-412b-ac23-4bcf78b87aca
+		summarizeBy: none
+		sourceColumn: PaymentTermsID
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedByUserID
+		dataType: string
+		lineageTag: 4a550ac6-887b-4c19-9873-3539854d559b
+		summarizeBy: none
+		sourceColumn: UpdatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FactoryBankBranchID
+		dataType: string
+		lineageTag: 6081520b-c906-4e39-b43c-b357577f0749
+		summarizeBy: none
+		sourceColumn: FactoryBankBranchID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FinancialCompanyID
+		dataType: string
+		lineageTag: e19b2872-0b7d-4d9b-87c9-88409a86823f
+		summarizeBy: none
+		sourceColumn: FinancialCompanyID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DestinationPortID
+		dataType: string
+		lineageTag: afb97ed5-94d5-43d2-b617-058bd4a5c007
+		summarizeBy: none
+		sourceColumn: DestinationPortID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerID
+		dataType: string
+		lineageTag: d743899d-3a3f-40bb-879b-d6f25e61d214
+		summarizeBy: none
+		sourceColumn: CustomerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column NAOther
+		dataType: string
+		lineageTag: a41aab0e-0982-46a3-8f6b-06daa1d76d53
+		summarizeBy: none
+		sourceColumn: NAOther
+
+		annotation SummarizationSetBy = Automatic
+
+	column OtherCottonType
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: dbef18a9-5658-4ce4-ba71-0e9609ae84fd
+		summarizeBy: none
+		sourceColumn: OtherCottonType
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrganisationStructureID
+		dataType: string
+		lineageTag: 90b93976-3ce6-4f6d-b693-473a47d12c6f
+		summarizeBy: none
+		sourceColumn: OrganisationStructureID
+
+		annotation SummarizationSetBy = Automatic
+
+	column TermsAndConditionsID
+		dataType: string
+		lineageTag: b1433888-cc97-4967-954b-19d550ee9adc
+		summarizeBy: none
+		sourceColumn: TermsAndConditionsID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition zFPO = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("52.220.68.78", "zinfotrek"),
+				    dbo_zFPO = Source{[Schema="dbo",Item="zFPO"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(dbo_zFPO, each ([RecordStatus] = "ACTIVE"))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

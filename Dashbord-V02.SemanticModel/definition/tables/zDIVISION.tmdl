@@ -1,0 +1,101 @@
+table zDIVISION
+	lineageTag: 4f2e722a-3da7-4869-a7a5-e8a975bf380c
+
+	column RecordStatus
+		dataType: string
+		lineageTag: abd9a60c-63e5-4803-b5b0-05713e2d55a5
+		summarizeBy: none
+		sourceColumn: RecordStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9baabe28-007a-453d-8714-06b2d847f604
+		summarizeBy: none
+		sourceColumn: CreatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: cb4e7f53-e832-4372-8c6d-b432d8994c6c
+			defaultHierarchy: LocalDateTable_c2bc1a25-b6bf-46ba-a961-cf41d9e48586.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedOnDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f04e74dc-a52e-430c-a2d0-f69d7aef3961
+		summarizeBy: none
+		sourceColumn: UpdatedOnDate
+
+		variation Variation
+			isDefault
+			relationship: 79f31603-5143-4454-89d8-04ce58cc9944
+			defaultHierarchy: LocalDateTable_5b0685ca-2bfa-4ad2-abeb-a90708f6d7d3.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column DivisionID
+		dataType: string
+		lineageTag: 79eadd54-e160-4ab5-846c-90739a762f38
+		summarizeBy: none
+		sourceColumn: DivisionID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DivisionName
+		dataType: string
+		lineageTag: 8dcbea12-663c-44e0-a417-c048bbf35cf1
+		summarizeBy: none
+		sourceColumn: DivisionName
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedByUserID
+		dataType: string
+		lineageTag: 78a1bf61-0023-4dbb-8fa1-68d3fa7f1037
+		summarizeBy: none
+		sourceColumn: CreatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedByUserID
+		dataType: string
+		lineageTag: 67801134-4046-4ec5-8619-0d563e673eb8
+		summarizeBy: none
+		sourceColumn: UpdatedByUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SAPCode
+		dataType: string
+		lineageTag: c73b3b0b-e289-4086-97eb-5bf932c76772
+		summarizeBy: none
+		sourceColumn: SAPCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column SAPDivisionCostCenter
+		dataType: string
+		lineageTag: 242b501c-ed01-42bc-b31b-474de21ed6f6
+		summarizeBy: none
+		sourceColumn: SAPDivisionCostCenter
+
+		annotation SummarizationSetBy = Automatic
+
+	partition zDIVISION = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("52.220.68.78", "zinfotrek"),
+				    dbo_zDIVISION = Source{[Schema="dbo",Item="zDIVISION"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(dbo_zDIVISION, each ([RecordStatus] = "ACTIVE"))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
